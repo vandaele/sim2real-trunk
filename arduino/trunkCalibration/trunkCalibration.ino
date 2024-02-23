@@ -19,22 +19,24 @@ const uint16_t SMIN = 297;
 const uint16_t SMAX = 666;
 const uint16_t LMIN = 974;
 const uint16_t LMAX = 297;
-const uint16_t SINIT = SMIN+abs(SMAX-SMIN)/4;
-const uint16_t LINIT = LMIN-abs(LMIN-LMAX)/4;
-const uint16_t RANGE = 25;
+// const uint16_t INIT[NB_CABLES] = {639, 564, 389, 564, 680, 605, 805, 605};
+const uint16_t INIT[NB_CABLES] = {666, 564, 389, 564, 563, 527, 805, 605}; 
+// const uint16_t SINIT = SMIN+abs(SMAX-SMIN)/4;
+// const uint16_t LINIT = LMIN-abs(LMIN-LMAX)/4;
+const uint16_t RANGE = 39;
 
 const uint8_t NB_ACTIONS = 100;
 uint8_t actions[NB_ACTIONS] = {5, 12, 12, 12, 12, 12, 7, 7, 7, 3, 3, 3, 3, 13, 13, 13, 5, 5, 5, 5, 4, 4, 4, 0, 0, 0, 2, 13, 13, 13, 13, 6, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13};
+//uint8_t actions[NB_ACTIONS] = {5,12,12,12,3,3,7,7,7,13,13,7,12,12,5,5,5,9,9,12,12,12,12,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9}; // CI4OB
+//uint8_t actions[NB_ACTIONS] = {5,12,12,12,3,3,7,7,7,13,13,7,7,7,1,1,1,1,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14}; // 4YADE
 
 void translate_actions(){
   for(uint8_t i = 0; i < NB_ACTIONS; i++) {
-        if (actions[i] < 8){
-          actions[i] = (actions[i] + 4) % 8;
-        }
-        else{
-          
-        }
-      }
+    if (actions[i] < 8)
+      actions[i] = (actions[i] + 4) % 8;
+    else
+      actions[i] = (actions[i] + 4) % 8 + 8;
+  }
 }
 
 void displayCables_byFeedback(){
@@ -70,31 +72,21 @@ void set_position_low(uint16_t i){
 }
 
 void set_position_reset(uint16_t i){ /*TODO for horizontal position */
-  uint16_t position = (i<4) ? SINIT : LINIT;
+  uint16_t position = INIT[i];
   servo[i]->setPosition(position, 100);
   servo_positions[i] = position;
 }
 
 void pull_cable(uint16_t i){
-  //uint16_t position = servo[cableId]->getPosition();
   uint16_t position = servo_positions[i];
   position = (i < 4) ? position+RANGE : position-RANGE;
-  //servo[cableId]->setPosition(position, 100);
   set_position(i, position);
-  Serial.print(i);
-  Serial.print(") ");
-  Serial.print("+\n");
 }
 
 void release_cable(uint16_t i){
-  //uint16_t position = servo[cableId]->getPosition();
   uint16_t position = servo_positions[i];
   position = (i < 4) ? position-RANGE : position+RANGE;
-  //servo[cableId]->setPosition(position, 100);
   set_position(i, position);
-  Serial.print(i);
-  Serial.print(") ");
-  Serial.print("-\n");
 }
 
 
@@ -170,8 +162,12 @@ void action_to_command(uint16_t action) {
 
 void simulate_policy(){
   for(uint8_t i = 0; i<NB_ACTIONS; i++) {
+    Serial.print("Step ");
+    Serial.print(i);
+    Serial.print(" Action ");
+    Serial.println(actions[i]);
     action_to_command(actions[i]);
-    delay(1000);
+    delay(500);
   }
 }
 
@@ -192,6 +188,7 @@ void setup() {
   }
   Serial.println();
   delay(1000);
+  translate_actions();
 }
 
 void loop() {
@@ -200,9 +197,9 @@ void loop() {
   if (Serial.available() > 0) {
     char c = Serial.read();
 
-    Serial.print("Selected cable: ");
-    Serial.println(cableId);
-    displayCables_byArray();
+    // Serial.print("Selected cable: ");
+    // Serial.println(cableId);
+    // displayCables_byArray();
 
     String ids = "012345678";
     int isid = ids.indexOf(c);
@@ -210,15 +207,16 @@ void loop() {
         cableId = c-'0';
         Serial.print("Selected cable: ");
         Serial.println(cableId);
-        displayCables_byArray();
     }
     else if(c == 'p') {
         // pull cable (plus)
         pull_cable(cableId);
+        Serial.print("+ ");
     }
     else if(c=='m') {
         // release cable (minus)
         release_cable(cableId);
+        Serial.print("- ");
     }
     else if(c=='a') {
         displayCables_byArray();
@@ -234,8 +232,8 @@ void loop() {
         }
     }
     else if(c=='s') {
+      Serial.println();
         simulate_policy();
     }
-  displayCables_byArray();
   }
 }

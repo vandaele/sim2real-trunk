@@ -1,6 +1,5 @@
 {
     "board": "arduino:avr:uno",
-    "port": "/dev/ttyACM0",
-    "sketch": "arduino/trunkCalibration/trunkCalibration.ino",
-    "programmer": "avrisp"
+    "port": "/dev/tty.usbmodem401101",
+    "sketch": "arduino/trunkCalibration/trunkCalibration.ino"
 }
