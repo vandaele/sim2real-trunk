@@ -165,7 +165,9 @@ void simulate_policy(){
     Serial.print("Step ");
     Serial.print(i);
     Serial.print(" Action ");
-    Serial.println(actions[i]);
+    Serial.print(actions[i]);
+    Serial.print(" Time ");
+    Serial.println(millis());
     action_to_command(actions[i]);
     delay(500);
   }
