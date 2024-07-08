@@ -30,6 +30,9 @@ uint8_t actions[NB_ACTIONS] = {5, 12, 12, 12, 12, 12, 7, 7, 7, 3, 3, 3, 3, 13, 1
 //uint8_t actions[NB_ACTIONS] = {5,12,12,12,3,3,7,7,7,13,13,7,12,12,5,5,5,9,9,12,12,12,12,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9}; // CI4OB
 //uint8_t actions[NB_ACTIONS] = {5,12,12,12,3,3,7,7,7,13,13,7,7,7,1,1,1,1,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14}; // 4YADE
 
+const unsigned long DELAY = 200;
+const uint8_t PLAYTIME = 100;
+
 void translate_actions(){
   for(uint8_t i = 0; i < NB_ACTIONS; i++) {
     if (actions[i] < 8)
@@ -61,7 +64,7 @@ void displayCables_byArray(){
 
 void set_position(uint16_t i, uint16_t position){
   position = (i<4) ? constrain(position, SMIN, SMAX) : constrain(position, LMAX, LMIN);
-  servo[i]->setPosition(position, 100);
+  servo[i]->setPosition(position, PLAYTIME);
   servo_positions[i] = position;
 }
 
@@ -161,15 +164,17 @@ void action_to_command(uint16_t action) {
 }
 
 void simulate_policy(){
+  uint16_t init_time = millis();
   for(uint8_t i = 0; i<NB_ACTIONS; i++) {
-    Serial.print("Step ");
+    Serial.print("Step: ");
     Serial.print(i);
-    Serial.print(" Action ");
+    Serial.print(" - Action: ");
     Serial.print(actions[i]);
-    Serial.print(" Time ");
-    Serial.println(millis());
+    Serial.print(" - Time passed: ");
+    Serial.print(millis() - init_time);
+    Serial.println(" ms");
     action_to_command(actions[i]);
-    delay(500);
+    delay(DELAY);
   }
 }
 
@@ -183,14 +188,14 @@ void setup() {
     Serial.print(i);
     Serial.print(") ");
     uint16_t init = (i<4) ? SMIN : LMIN;
-    servo[i]->setPosition(init);
+    servo[i]->setPosition(init, PLAYTIME);
     servo_positions[i] = init;
     Serial.print(init);
     Serial.print(" ");
   }
   Serial.println();
   delay(1000);
-  translate_actions();
+  translate_actions(); // adapt actions to servo motors control
 }
 
 void loop() {
@@ -206,6 +211,7 @@ void loop() {
     String ids = "012345678";
     int isid = ids.indexOf(c);
     if (isid > -1) {
+        // SELECT CABLE
         cableId = c-'0';
         Serial.print("Selected cable: ");
         Serial.println(cableId);
@@ -221,7 +227,11 @@ void loop() {
         Serial.print("- ");
     }
     else if(c=='a') {
+        
         displayCables_byArray();
+    }
+    else if(c=='f') {
+        displayCables_byFeedback();
     }
     else if(c=='l') {
         for(uint8_t i = 0; i<NB_CABLES; i++) {
@@ -235,7 +245,10 @@ void loop() {
     }
     else if(c=='s') {
       Serial.println();
-        simulate_policy();
+      simulate_policy();
     }
+   else{
+      Serial.print("ERROR - Command not recognised");
+   }
   }
 }
