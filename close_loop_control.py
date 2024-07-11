@@ -1,8 +1,7 @@
 """Script for open-loop control of trunk (for data collection)
 
   Examples:
-  python open_loop_control.py # for hardcoded set of actions
-  python open_loop_control.py --data_path dataset_fixed_actions/49TOJ.npy # for loading a set of actions
+  python close_loop_control.py
 """
 
 # Importing Libraries 
@@ -10,7 +9,7 @@ import serial
 import time
 import numpy as np
 
-PORT = '/dev/ttyACM0'
+PORT = '/dev/ttyACM1'
 import argparse
 
 DELAY = 100*0.001
@@ -41,10 +40,9 @@ args = parser.parse_args()
 while True:
     if args.data_path is not None:
          policy = load_actions_from_file(args.data_path)
-         print("Loaded actions from path ", args.data_path)
+         print("Loaded policy from path ", args.data_path)
     else:
-         print("Loaded default actions")
-    print(policy, '\n')
+         print("Loaded default policy")
     inp = input("Press:\n\t- 'i' to set init position\n\t- 'l' to set low position\n\t- anything else to start the policy\n")
     if inp == 'i':
         print("Set init position\n")
@@ -53,7 +51,9 @@ while True:
         print("Set low position\n")
         ard.query(inp)
     else:
-        for action in policy:
-            print("action: ", action)
+        steps = 100
+        for _ in steps:
+            obs = ... # data from optitrack
+            action = ... # action from policy
             ard.query(str(action))
         print("Policy executed\n")

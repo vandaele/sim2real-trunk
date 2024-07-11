@@ -307,7 +307,14 @@ void loop_motors_python() {
         set_position_init(i);
       }
       Serial.println("Initial position done");
-    } else {
+    }
+    else if (a == "l") {
+      for (uint8_t i = 0; i < NB_CABLES; i++) {
+        set_position_low(i);
+      }
+      Serial.println("Low position done");
+    }
+    else {
       uint16_t action = a.toInt();  // convert the input to an integer
       uint16_t time = millis() - init_time;
       Serial.println("Step: " + String(step) + " - Action: " + String(action) + " - Time passed: " + String(time) + " ms");
