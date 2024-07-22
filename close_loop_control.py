@@ -35,6 +35,7 @@ ard = Arduino(PORT)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_path', default=None, type=str, help='Path to custom offline dataset')
+parser.add_argument('--max_steps', default=100, type=int, help='Number of steps in a single policy execution')
 args = parser.parse_args()
 
 while True:
@@ -51,8 +52,7 @@ while True:
         print("Set low position\n")
         ard.query(inp)
     else:
-        steps = 100
-        for _ in steps:
+        for _ in range(args.max_steps):
             obs = ... # data from optitrack
             action = ... # action from policy
             ard.query(str(action))
