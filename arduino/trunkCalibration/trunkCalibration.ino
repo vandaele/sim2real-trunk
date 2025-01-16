@@ -6,12 +6,12 @@
 #define PIN_SW_TX 11
 
 const uint8_t NB_CABLES = 8;
-const uint16_t SMIN = 297;
-const uint16_t SMAX = 666;
-const uint16_t LMIN = 974;
-const uint16_t LMAX = 297;
+const uint16_t SMIN = 280;
+const uint16_t SMAX = 640;
+const uint16_t LMIN = 1000;
+const uint16_t LMAX = 280;
 const uint16_t INIT[NB_CABLES] = {472, 469, 374, 479, 812, 780, 945, 781}; 
-const uint16_t RANGE = 39;
+const uint16_t RANGE = 40;
 const uint8_t PLAYTIME = 45; // playtime = time_ms / 11.2
 
 SoftwareSerial   servo_serial(PIN_SW_RX, PIN_SW_TX);
