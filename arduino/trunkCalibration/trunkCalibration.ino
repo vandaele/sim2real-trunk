@@ -10,7 +10,7 @@ const uint16_t SMIN = 280;
 const uint16_t SMAX = 640;
 const uint16_t LMIN = 1000;
 const uint16_t LMAX = 280;
-const uint16_t INIT[NB_CABLES] = {472, 469, 374, 479, 812, 780, 945, 781}; 
+const uint16_t INIT[NB_CABLES] = {812, 780, 945, 781, 472, 469, 374, 479};
 const uint16_t RANGE = 40;
 const uint8_t PLAYTIME = 45; // playtime = time_ms / 11.2
 
@@ -47,13 +47,13 @@ void displayCables_byArray(){
 }
 
 void set_position(uint16_t i, uint16_t position){
-  position = (i<4) ? constrain(position, SMIN, SMAX) : constrain(position, LMAX, LMIN);
+  position = (i<4) ? constrain(position, LMAX, LMIN) : constrain(position, SMIN, SMAX);
   servo[i]->setPosition(position, PLAYTIME);
   servo_positions[i] = position;
 }
 
 void set_position_low(uint16_t i){
-  uint16_t position = (i<4) ? SMIN : LMIN;
+  uint16_t position = (i<4) ? LMIN : SMIN;
   servo[i]->setPosition(position, 200);
   servo_positions[i] = position;
 }
@@ -66,13 +66,13 @@ void set_position_init(uint16_t i){
 
 void pull_cable(uint16_t i){
   uint16_t position = servo_positions[i];
-  position = (i < 4) ? position+RANGE : position-RANGE;
+  position = (i < 4) ? position-RANGE : position+RANGE;
   set_position(i, position);
 }
 
 void release_cable(uint16_t i){
   uint16_t position = servo_positions[i];
-  position = (i < 4) ? position-RANGE : position+RANGE;
+  position = (i < 4) ? position+RANGE : position-RANGE;
   set_position(i, position);
 }
 

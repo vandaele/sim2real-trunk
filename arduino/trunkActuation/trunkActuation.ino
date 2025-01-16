@@ -19,8 +19,8 @@ const uint16_t SMIN = 297;
 const uint16_t SMAX = 666;
 const uint16_t LMIN = 974;
 const uint16_t LMAX = 297;
-// const uint16_t INIT[NB_CABLES] = {639, 564, 389, 564, 680, 605, 805, 605};
-const uint16_t INIT[NB_CABLES] = {472, 469, 374, 479, 812, 780, 945, 781}; 
+// const uint16_t INIT[NB_CABLES] = {680, 605, 805, 605, 639, 564, 389, 564};
+const uint16_t INIT[NB_CABLES] = {812, 780, 945, 781, 472, 469, 374, 479};
 // const uint16_t SINIT = SMIN+abs(SMAX-SMIN)/4;
 // const uint16_t LINIT = LMIN-abs(LMIN-LMAX)/4;
 const uint16_t RANGE = 39;
@@ -33,23 +33,6 @@ uint8_t actions[NB_ACTIONS] = {5, 12, 12, 12, 12, 12, 7, 7, 7, 3, 3, 3, 3, 13, 1
 
 const unsigned long DELAY = 50;
 const uint8_t PLAYTIME = 100;
-
-void translate_actions(){
-  for(uint8_t i = 0; i < NB_ACTIONS; i++) {
-    if (actions[i] < 8)
-      actions[i] = (actions[i] + 4) % 8;
-    else
-      actions[i] = (actions[i] + 4) % 8 + 8;
-  }
-}
-
-uint8_t translate_action(uint8_t action){
-    if (action < 8)
-      action = (action + 4) % 8;
-    else
-      action = (action + 4) % 8 + 8;
-    return action;
-}
 
 void displayCables_byFeedback(){
   for(uint8_t i = 0; i < NB_CABLES; i++) {
@@ -72,13 +55,13 @@ void displayCables_byArray(){
 }
 
 void set_position(uint16_t i, uint16_t position){
-  position = (i<4) ? constrain(position, SMIN, SMAX) : constrain(position, LMAX, LMIN);
+  position = (i<4) ? constrain(position, LMAX, LMIN): constrain(position, SMIN, SMAX);
   servo[i]->setPosition(position, PLAYTIME);
   servo_positions[i] = position;
 }
 
 void set_position_low(uint16_t i){
-  uint16_t position = (i<4) ? SMIN : LMIN;
+  uint16_t position = (i<4) ? LMIN : SMIN;
   servo[i]->setPosition(position, 200);
   servo_positions[i] = position;
 }
@@ -91,13 +74,13 @@ void set_position_init(uint16_t i){ /*TODO for horizontal position */
 
 void pull_cable(uint16_t i){
   uint16_t position = servo_positions[i];
-  position = (i < 4) ? position+RANGE : position-RANGE;
+  position = (i < 4) ? position-RANGE : position+RANGE;
   set_position(i, position);
 }
 
 void release_cable(uint16_t i){
   uint16_t position = servo_positions[i];
-  position = (i < 4) ? position-RANGE : position+RANGE;
+  position = (i < 4) ? position+RANGE : position-RANGE;
   set_position(i, position);
 }
 
@@ -181,7 +164,7 @@ void simulate_policy(){
     Serial.print(" - Time passed: ");
     Serial.print(millis() - init_time);
     Serial.println(" ms");
-    action_to_command(translate_action(actions[i]));
+    action_to_command(actions[i]);
     delay(DELAY);
   }
 }
@@ -295,7 +278,7 @@ void loop_motors_python() {
       uint16_t action = a.toInt();  // convert the input to an integer
       uint16_t time = millis() - init_time;
       Serial.println("Step: " + String(step) + " - Action: " + String(action) + " - Time passed: " + String(time) + " ms");
-      action_to_command(translate_action(action));
+      action_to_command(action);
       delay(DELAY);
       step += 1;
       if (step >= 100) {
