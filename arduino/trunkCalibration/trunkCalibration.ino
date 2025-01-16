@@ -263,29 +263,6 @@ void loop_motors_gui() {
   }
 }
 
-void setup_blink() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(7, OUTPUT);
-  Serial.begin(115200);
-}
-
-void blink_led() {
-  digitalWrite(7, HIGH);  // turn the LED on (HIGH is the voltage level)
-  delay(500);                      // wait for a 500ms
-  digitalWrite(7, LOW);   // turn the LED off by making the voltage LOW
-  delay(500);                      // wait for a 500ms
-}
-
-void blink_led_from_input(){
-  while (!Serial.available());
-  String input = Serial.readStringUntil('\n');  // read the input until newline
-  uint16_t N = input.toInt();  // convert the input to an integer
-  Serial.println(N);
-  for (int i = 0; i < N; i++) {
-    blink_led();
-  }
-}
-
 // the setup function runs once when you press reset or power the board
 void setup(){
   setup_motors();
