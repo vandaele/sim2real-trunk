@@ -23,6 +23,8 @@ unsigned long last_update = 0;
 unsigned long now = 0;
 String cableIds = "";
 uint8_t cableId = 0;
+bool torqueOnForAll = true;
+bool torqueOn[NB_CABLES] = {true, true, true, true, true, true, true, true};
 
 void displayCables_byFeedback(){
   for(uint8_t i = 0; i < NB_CABLES; i++) {
@@ -74,6 +76,14 @@ void release_cable(uint16_t i){
   set_position(i, position);
 }
 
+void toggle_torque(uint16_t i){
+  torqueOn[i] = !torqueOn[i];
+  if(torqueOn[i])
+    servo[i]->setTorqueOn();
+  else
+    servo[i]->setTorqueOff();
+}
+
 // the setup function runs once when you press reset or power the board
 void setup(){
   for(uint8_t i = 0; i < NB_CABLES; i++){
@@ -84,7 +94,7 @@ void setup(){
   delay(500);
   for(uint8_t i = 0; i<NB_CABLES; i++) {
     servo[i] = new HerkulexServo(herkulex_bus, i);
-    servo[i]->setTorqueOn();  // turn power on
+    if(torqueOn[i]) { servo[i]->setTorqueOn(); }
   }
   delay(1000);
   Serial.println("Setup done");
@@ -118,6 +128,20 @@ void loop(){
     }
     else if(c=='f') {
         displayCables_byFeedback();
+    }
+    else if(c=='o') {
+        toggle_torque(cableId);
+        Serial.print("motor: ");
+        Serial.println( torqueOn[cableId] ? "ON" : "OFF");
+    }
+    else if(c=='O') {
+        for(uint8_t i = 0; i<NB_CABLES; i++) {
+          torqueOn[i] = torqueOnForAll;
+          toggle_torque(i);
+        }
+        torqueOnForAll = !torqueOnForAll;
+        Serial.print("All motors ");
+        Serial.println(torqueOnForAll ? "ON" : "OFF");
     }
     else if(c=='l') {
         set_position_low(cableId);
