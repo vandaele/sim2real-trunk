@@ -120,19 +120,25 @@ void loop(){
         displayCables_byFeedback();
     }
     else if(c=='l') {
+        set_position_low(cableId);
+    }
+    else if(c=='L') {
         for(uint8_t i = 0; i<NB_CABLES; i++) {
           set_position_low(i);
         }
         Serial.println("Low position done");
     }
     else if(c=='i') {
+        set_position_init(cableId);
+    }
+    else if(c=='I') {
         for(uint8_t i = 0; i<NB_CABLES; i++) {
           set_position_init(i);
         }
         Serial.println("Initial position done");
     }
-   else{
+    else{
       Serial.println("ERROR - Command not recognised");
-   }
+    }
   }
 }
