@@ -12,7 +12,7 @@ const uint16_t LMIN = 974;
 const uint16_t LMAX = 297;
 const uint16_t INIT[NB_CABLES] = {472, 469, 374, 479, 812, 780, 945, 781}; 
 const uint16_t RANGE = 39;
-const uint8_t PLAYTIME = 100;
+const uint8_t PLAYTIME = 45; // playtime = time_ms / 11.2
 
 SoftwareSerial   servo_serial(PIN_SW_RX, PIN_SW_TX);
 HerkulexServoBus herkulex_bus(servo_serial);
@@ -52,13 +52,13 @@ void set_position(uint16_t i, uint16_t position){
 
 void set_position_low(uint16_t i){
   uint16_t position = (i<4) ? SMIN : LMIN;
-  servo[i]->setPosition(position, 100);
+  servo[i]->setPosition(position, 200);
   servo_positions[i] = position;
 }
 
 void set_position_init(uint16_t i){
   uint16_t position = INIT[i];
-  servo[i]->setPosition(position, 100);
+  servo[i]->setPosition(position, 200);
   servo_positions[i] = position;
 }
 
