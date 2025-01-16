@@ -119,7 +119,7 @@ void loop(){
         pull_cable(cableId);
         Serial.print("+ ");
     }
-    else if(c=='m') {
+    else if(c=='r') {
         release_cable(cableId);
         Serial.print("- ");
     }
