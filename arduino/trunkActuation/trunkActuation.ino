@@ -82,73 +82,15 @@ void release_cable(uint16_t i){
 }
 
 void action_to_command(uint16_t action) {
-    uint16_t cableId;
-    switch(action) {
-        case 0:
-            cableId = 0;
-            pull_cable(cableId);
-            break;
-        case 1:
-            cableId = 1;
-            pull_cable(cableId);
-            break;
-        case 2:
-            cableId = 2;
-            pull_cable(cableId);
-            break;
-        case 3:
-            cableId = 3;
-            pull_cable(cableId);
-            break;
-        case 4:
-            cableId = 4;
-            pull_cable(cableId);
-            break;
-        case 5:
-            cableId = 5;
-            pull_cable(cableId);
-            break;
-        case 6:
-            cableId = 6;
-            pull_cable(cableId);
-            break;
-        case 7:
-            cableId = 7;
-            pull_cable(cableId);
-            break;
-        case 8:
-            cableId = 0;
-            release_cable(cableId);
-            break;
-        case 9:
-            cableId = 1;
-            release_cable(cableId);
-            break;
-        case 10:
-            cableId = 2;
-            release_cable(cableId);
-            break;
-        case 11:
-            cableId = 3;
-            release_cable(cableId);
-            break;
-        case 12:
-            cableId = 4;
-            release_cable(cableId);
-            break;
-        case 13:
-            cableId = 5;
-            release_cable(cableId);
-            break;
-        case 14:
-            cableId = 6;
-            release_cable(cableId);
-            break;
-        case 15:
-            cableId = 7;
-            release_cable(cableId);
-            break;
+    if(action <0 || action > 15){
+        Serial.println("ERROR: action value not in range [0-15]");
+        return;
     }
+    uint16_t cableId = action%8;
+    if(action < 8)
+        pull_cable(cableId);
+    else
+        release_cable(cableId);
 }
 
 void simulate_policy(){
@@ -157,14 +99,14 @@ void simulate_policy(){
   while( i<NB_ACTIONS) {
     now = millis();
     if ( (now - last_update) >= DELAY) {
-    Serial.print("Step: ");
-    Serial.print(i);
-    Serial.print(" - Action: ");
-    Serial.print(actions[i]);
-    Serial.print(" - Time passed: ");
-    Serial.print(millis() - init_time);
-    Serial.println(" ms");
-    action_to_command(actions[i]);
+      Serial.print("Step: ");
+      Serial.print(i);
+      Serial.print(" - Action: ");
+      Serial.print(actions[i]);
+      Serial.print(" - Time passed: ");
+      Serial.print(millis() - init_time);
+      Serial.println(" ms");
+      action_to_command(actions[i]);
       last_update = now;
       i++;
     }
