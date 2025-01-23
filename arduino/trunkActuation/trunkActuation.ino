@@ -59,13 +59,13 @@ void set_position(uint16_t i, uint16_t position){
 
 void set_position_low(uint16_t i){
   uint16_t position = (i<4) ? LMIN : SMIN;
-  servo[i]->setPosition(position, 200);
+  servo[i]->setPosition(position, 255);
   servo_positions[i] = position;
 }
 
-void set_position_init(uint16_t i){ /*TODO for horizontal position */
+void set_position_init(uint16_t i){
   uint16_t position = INIT[i];
-  servo[i]->setPosition(position, 200);
+  servo[i]->setPosition(position, 255);
   servo_positions[i] = position;
 }
 
