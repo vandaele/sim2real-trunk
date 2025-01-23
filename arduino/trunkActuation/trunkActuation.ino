@@ -52,7 +52,7 @@ void displayCables_byArray(){
 }
 
 void set_position(uint16_t i, uint16_t position){
-  position = (i<4) ? constrain(position, LMAX, LMIN): constrain(position, SMIN, SMAX);
+  position = (i<4) ? constrain(position, LMAX, LMIN) : constrain(position, SMIN, SMAX);
   servo[i]->setPosition(position, PLAYTIME);
   servo_positions[i] = position;
 }
