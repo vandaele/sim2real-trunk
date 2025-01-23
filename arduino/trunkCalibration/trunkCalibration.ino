@@ -12,7 +12,7 @@ const uint16_t LMIN = 1000;
 const uint16_t LMAX = 280;
 const uint16_t INIT[NB_CABLES] = {812, 780, 945, 781, 472, 469, 374, 479};
 const uint16_t RANGE = 40;
-const uint8_t PLAYTIME = 45; // playtime = time_ms / 11.2
+const uint8_t PLAYTIME = 9; // playtime = time_ms / 11.2
 
 SoftwareSerial   servo_serial(PIN_SW_RX, PIN_SW_TX);
 HerkulexServoBus herkulex_bus(servo_serial);
