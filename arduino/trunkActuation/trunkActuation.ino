@@ -152,8 +152,11 @@ void action_to_command(uint16_t action) {
 }
 
 void simulate_policy(){
-  uint16_t init_time = millis();
-  for(uint8_t i = 0; i<NB_ACTIONS; i++) {
+  uint8_t i = 0;
+  init_time = millis();
+  while( i<NB_ACTIONS) {
+    now = millis();
+    if ( (now - last_update) >= DELAY) {
     Serial.print("Step: ");
     Serial.print(i);
     Serial.print(" - Action: ");
@@ -162,7 +165,9 @@ void simulate_policy(){
     Serial.print(millis() - init_time);
     Serial.println(" ms");
     action_to_command(actions[i]);
-    delay(DELAY);
+      last_update = now;
+      i++;
+    }
   }
 }
 
@@ -249,7 +254,6 @@ void setup(){
 }
 
 uint8_t step = 0;
-uint16_t init_time = millis();
 
 void loop_motors_python() {
   herkulex_bus.update();
