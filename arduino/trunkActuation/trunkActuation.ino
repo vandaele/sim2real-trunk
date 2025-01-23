@@ -179,13 +179,6 @@ void setup_motors() {
   for(uint8_t i = 0; i<NB_CABLES; i++) {
     servo[i] = new HerkulexServo(herkulex_bus, i);
     servo[i]->setTorqueOn();  // turn power on
-    // Serial.print(i);
-    // Serial.print(") ");
-    // uint16_t init = (i<4) ? SMIN : LMIN;
-    // servo[i]->setPosition(init, PLAYTIME); // set position to low position
-    // servo_positions[i] = init;
-    // Serial.print(init);
-    // Serial.print(" ");
   }
   Serial.println();
   delay(1000);
@@ -199,29 +192,7 @@ void loop_motors_gui() {
     char c = Serial.read();
     Serial.print(c);
 
-    // Serial.print("Selected cable: ");
-    // Serial.println(cableId);
-    // displayCables_byArray();
-
-    String ids = "012345678";
-    int isid = ids.indexOf(c);
-    if (isid > -1) {
-        // SELECT CABLE
-        cableId = c-'0';
-        Serial.print("Selected cable: ");
-        Serial.println(cableId);
-    }
-    else if(c == 'p') {
-        // pull cable (plus)
-        pull_cable(cableId);
-        Serial.print("+ ");
-    }
-    else if(c=='m') {
-        // release cable (minus)
-        release_cable(cableId);
-        Serial.print("- ");
-    }
-    else if(c=='a') {     
+    if(c=='a') {     
         displayCables_byArray();
     }
     else if(c=='f') {
@@ -291,5 +262,5 @@ void loop_motors_python() {
 
 // the loop function runs over and over again forever
 void loop(){
-  loop_motors_python();
+  loop_motors_gui();
 }
