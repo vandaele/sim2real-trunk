@@ -26,6 +26,15 @@ uint8_t cableId = 0;
 bool torqueOnForAll = true;
 bool torqueOn[NB_CABLES] = {true, true, true, true, true, true, true, true};
 
+const uint8_t NB_ACTIONS = 100;
+// AKLWI
+const uint8_t actions[NB_ACTIONS] = {5, 12, 12, 12, 7, 7, 3, 3, 7, 7, 13, 13, 11, 11, 11, 11, 1, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14};
+const unsigned long DELAY = 100;
+uint16_t step = 0;
+uint16_t init_time = 0;
+
+
+
 void displayCables_byFeedback(){
   for(uint8_t i = 0; i < NB_CABLES; i++) {
         Serial.print(i);
@@ -82,6 +91,42 @@ void toggle_torque(uint16_t i){
     servo[i]->setTorqueOn();
   else
     servo[i]->setTorqueOff();
+}
+
+void action_to_command(uint16_t action) {
+    if(action <0 || action > 15){
+        Serial.println("ERROR: action value not in range [0-15]");
+        return;
+    }
+    uint16_t cableId = action%8;
+    if(action < 8)
+        pull_cable(cableId);
+    else
+        release_cable(cableId);
+}
+
+void step_policy(uint16_t i){
+  Serial.print("Step: ");
+  Serial.print(i);
+  Serial.print(" - Action: ");
+  Serial.print(actions[i]);
+  Serial.print(" - Time passed: ");
+  Serial.print(millis() - init_time);
+  Serial.println(" ms");
+  action_to_command(actions[i]);
+}
+
+void simulate_policy(){
+  step = 0;
+  init_time = millis();
+  while( step < NB_ACTIONS) {
+    now = millis();
+    if ( (now - last_update) >= DELAY) {
+      step_policy(step);
+      last_update = now;
+      step++;
+    }
+  }
 }
 
 // the setup function runs once when you press reset or power the board
@@ -156,10 +201,18 @@ void loop(){
         set_position_init(cableId);
     }
     else if(c=='I') {
+      step = 0;
         for(uint8_t i = 0; i<NB_CABLES; i++) {
           set_position_init(i);
         }
         Serial.println("Initial position done");
+    }
+    else if(c=='s') {
+      step_policy(step);
+      step++;
+    }
+    else if(c=='S') {
+      simulate_policy();
     }
     else{
       Serial.println("ERROR - Command not recognised");
