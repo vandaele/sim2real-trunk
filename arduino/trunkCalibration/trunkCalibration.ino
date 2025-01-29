@@ -10,8 +10,10 @@ const uint16_t SMIN = 280;
 const uint16_t SMAX = 640;
 const uint16_t LMIN = 1000;
 const uint16_t LMAX = 280;
-const uint16_t INIT[NB_CABLES] = {850, 898, 840, 846, 476, 464, 436, 452};
-const uint16_t RANGE = 40;
+// const uint16_t INIT[NB_CABLES] = {930, 766, 1000, 796, 600, 492, 560, 440};
+const uint16_t INIT[NB_CABLES] = {828, 762, 1000, 798, 600, 492, 560, 440};
+const uint16_t RANGE_HIGH = 40;
+const uint16_t RANGE_LOW = 2;
 const uint8_t PLAYTIME = 9; // playtime = time_ms / 11.2
 
 SoftwareSerial   servo_serial(PIN_SW_RX, PIN_SW_TX);
@@ -23,12 +25,15 @@ unsigned long last_update = 0;
 unsigned long now = 0;
 String cableIds = "";
 uint8_t cableId = 0;
+uint16_t range = RANGE_HIGH;
 bool torqueOnForAll = true;
 bool torqueOn[NB_CABLES] = {true, true, true, true, true, true, true, true};
 
 const uint8_t NB_ACTIONS = 100;
 // AKLWI
 const uint8_t actions[NB_ACTIONS] = {5, 12, 12, 12, 7, 7, 3, 3, 7, 7, 13, 13, 11, 11, 11, 11, 1, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14};
+// X0HBR
+// const uint8_t actions[NB_ACTIONS] = {5, 12, 12, 3, 7, 7, 7, 7, 7, 13, 12, 8, 8, 1, 1, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8};
 const unsigned long DELAY = 100;
 uint16_t step = 0;
 uint16_t init_time = 0;
@@ -75,13 +80,13 @@ void set_position_init(uint16_t i){
 
 void pull_cable(uint16_t i){
   uint16_t position = servo_positions[i];
-  position = (i < 4) ? position-RANGE : position+RANGE;
+  position = (i < 4) ? position-range : position+range;
   set_position(i, position);
 }
 
 void release_cable(uint16_t i){
   uint16_t position = servo_positions[i];
-  position = (i < 4) ? position+RANGE : position-RANGE;
+  position = (i < 4) ? position+range : position-range;
   set_position(i, position);
 }
 
@@ -127,6 +132,10 @@ void simulate_policy(){
       step++;
     }
   }
+}
+
+void switch_range_value() {
+  range = (range == RANGE_HIGH) ? RANGE_LOW : RANGE_HIGH;
 }
 
 // the setup function runs once when you press reset or power the board
@@ -213,6 +222,11 @@ void loop(){
     }
     else if(c=='S') {
       simulate_policy();
+    }
+    else if(c=='c') {
+      switch_range_value();
+      Serial.print("Cable movement range is now ");
+      Serial.println(range);
     }
     else{
       Serial.println("ERROR - Command not recognised");
