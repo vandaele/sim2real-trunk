@@ -84,8 +84,8 @@ def main():
             inp = input("Press:\n"
                         "\t- 'i' to set init position\n"
                         "\t- 'l' to set low position\n"
-                        "\t- 'q' to quit\n"
-                        "\t- anything else to start the policy\n")
+                        "\t- 's' to start the policy\n"
+                        "\t- 'q' to quit\n")
             if inp == 'i':
                 print("Set init position\n")
                 ard.query(inp)
@@ -98,9 +98,7 @@ def main():
             elif inp == 'l':
                 print("Set low position\n")
                 ard.query(inp)
-            elif inp == 'q':
-                break
-            else:
+            elif inp == 's':
                 init_time = time.time()
                 step = 0
                 last_update = 0
@@ -131,6 +129,8 @@ def main():
                 csv_filename = f'optitrack_data/collected_data_{date}.csv'
                 df.to_csv(csv_filename, index=False)
                 print(f"Data saved to {csv_filename}")
+            elif inp == 'q':
+                break
 
 
 if __name__ == '__main__':
