@@ -14,6 +14,7 @@ from filterpy.kalman import MerweScaledSigmaPoints
 
 from filterpy.monte_carlo import systematic_resample
 from numpy.random import uniform, randn
+from scipy.spatial.transform import Rotation as R
 
 # DT = 0.008333
 DT = 0.05
@@ -77,5 +78,51 @@ def init_ukf(initial_position, dt=DT):
     measurement_noise = np.eye(3) * 1e-2  # Measurement noise (accuracy and precision of sensors)
 
     ukf = initialize_ukf(dt, initial_state, initial_covariance, process_noise, measurement_noise)
+
+    return ukf
+
+def fx_quat(q, dt):
+    """
+    State transition function for quaternion filtering.
+    Uses quaternion multiplication to propagate orientation.
+    """
+    # Convert quaternion state to scipy Rotation object
+    rot = R.from_quat(q[:4])  # First 4 elements are quaternion
+
+    # Apply a small rotation to simulate continuous motion (assume small angular velocity)
+    delta_rot = R.from_rotvec(q[4:] * dt)  # Last 3 elements are angular velocity
+
+    # Update quaternion using rotation multiplication
+    new_q = (rot * delta_rot).as_quat()
+
+    # Normalize quaternion to prevent drift
+    new_q /= np.linalg.norm(new_q)
+
+    # Return updated quaternion + unchanged angular velocity
+    return np.hstack((new_q, q[4:]))  
+
+def hx_quat(q):
+    """
+    Measurement function: extracts the quaternion (first 4 elements).
+    """
+    return q[:4]  # Extract quaternion
+
+def initialize_quaternion_ukf(dt, initial_quaternion, initial_angular_velocity):
+    """
+    Initializes a UKF for quaternion filtering.
+    """
+    # Define sigma points for a 7D state (4D quaternion + 3D angular velocity)
+    points = MerweScaledSigmaPoints(n=7, alpha=0.1, beta=2., kappa=0)
+
+    # Initialize UKF with 7D state (Quaternion + Angular Velocity)
+    ukf = UKF(dim_x=7, dim_z=4, fx=fx_quat, hx=hx_quat, dt=dt, points=points)
+
+    # Initial state: quaternion + angular velocity
+    ukf.x = np.hstack((initial_quaternion, initial_angular_velocity))
+
+    # Covariances (adjust based on noise levels)
+    ukf.P = np.eye(7) * 0.1  # Initial uncertainty
+    ukf.Q = np.eye(7) * 0.01  # Process noise
+    ukf.R = np.eye(4) * 0.01  # Measurement noise
 
     return ukf

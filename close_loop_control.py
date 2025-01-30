@@ -26,6 +26,11 @@ INIT_POS = [[0.1045, -4.1515,37.52175], [2.06775,-19.974,73.605], [5.67975, -40.
 goal_position = [100.0, -100.0, 50.0]
 
 filtering_data = True
+# Define the desired frame rate and number of actions
+optitrack_fps = 120  # Frames per second for Optitrack
+control_policy_hz = 10  # Frequency of actions in Hz
+frames_per_action = 1  # Since we now have data directly at control frequency
+DT = 1.0 / control_policy_hz  # Time step matching control policy
 
 class Arduino:
     def __init__(self, port):
@@ -43,9 +48,14 @@ def apply_ukf_vectorized(ukfs, obs):
         ukfs[i].update(obs[i*3:i*3+3])
         obs[i*3:i*3+3] = ukfs[i].x[:3]
 
-    # ukfs[4].predict() # cube
-    # ukfs[4].update(obs[15:21])
-    # obs[15:21] = ukfs[4].x[:7]
+    ukfs[4].predict()
+    ukfs[4].update(obs[15:18])  # Cube position
+    obs[15:18] = ukfs[4].x[:3]
+
+    ukfs[5].predict()
+    ukfs[5].update(obs[18:22])  # Cube rotation
+    obs[18:22] = ukfs[5].x[:4] # Extract and normalize the quaternion
+    obs[18:22] /= np.linalg.norm(obs[18:22])  # Normalize to maintain unit norm
     return obs
 
 def load_actions_from_file(path):
@@ -182,8 +192,11 @@ def main():
                 obs = frame_to_obs(last_frame)
                 evaluate(obs)
                 dataset['observations'].append(obs)
-                ukfs = [filtering.init_ukf(obs[i*3:i*3+3]) for i in range(4)]
-                ukfs.append(filtering.init_ukf(obs[15:21]))  # Cube pos & rotation
+                ukfs = [filtering.init_ukf(obs[i*3:i*3+3], dt=DT) for i in range(4)]
+                ukfs.append(filtering.init_ukf(obs[15:18], dt=DT))  # UKF for cube position
+                ukfs.append(filtering.initialize_quaternion_ukf(dt=DT,  # UKF for cube rotation
+                                      initial_quaternion=obs[18:22], 
+                                      initial_angular_velocity=[0, 0, 0]))  
                 while step < args.max_steps:
                     now = time.time()
                     if (now - last_update) >= DELAY:
