@@ -8,30 +8,24 @@
 import serial 
 import time
 import numpy as np
-import filtering
-
-PORT = '/dev/ttyACM1'
 import argparse
+import filtering
+import os
+from datetime import datetime
+from policy.policy import Policy
 
+from natnet_client import DataFrame, NatNetClient
+import pdb
+
+#PORT = '/dev/ttyACM1'
+PORT = '/dev/tty.usbmodem401101'
 DELAY = 100*0.001
+
+INIT_POS = [[0.1045, -4.1515,37.52175], [2.06775,-19.974,73.605], [5.67975, -40.5375,120.3565], [10.593, -62.528,166.6675], [0.0,-82.819,99.998]]
+# Fixed goal position
+goal_position = [100.0, -100.0, 50.0]
+
 filtering_data = True
-
-def load_actions_from_file(path):
-	"""Load offline actions from file path"""
-	actions = np.load(path)
-	return actions
-
-def apply_ukf_vectorized(ukfs, obs):
-    """Apply UKF filtering"""
-    for i in range(4): # trunk sections
-        ukfs[i].predict()
-        ukfs[i].update(obs[0][i*3:i*3+3])
-        obs[0][i*3:i*3+3] = ukfs[i].x[:3]
-
-    ukfs[4].predict() # cube
-    ukfs[4].update(obs[0][15:21])
-    obs[0][15:21] = ukfs[4].x[:7]
-    return obs
 
 class Arduino:
     def __init__(self, port):
@@ -41,65 +35,180 @@ class Arduino:
     def query(self, message):
         self.dev.write((message + '\n').encode('ascii'))
 
-ard = Arduino(PORT)
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--data_path', default=None, type=str, help='Path to custom offline dataset')
-parser.add_argument('--max_steps', default=100, type=int, help='Number of steps in a single policy execution')
-args = parser.parse_args()
+def apply_ukf_vectorized(ukfs, obs):
+    """Apply UKF filtering"""
+    for i in range(4): # trunk sections
+        ukfs[i].predict()
+        ukfs[i].update(obs[i*3:i*3+3])
+        obs[i*3:i*3+3] = ukfs[i].x[:3]
 
-while True:
+    ukfs[4].predict() # cube
+    ukfs[4].update(obs[15:21])
+    obs[15:21] = ukfs[4].x[:7]
+    return obs
+
+def load_actions_from_file(path):
+	"""Load offline actions from file path"""
+	actions = np.load(path)
+	return actions
+
+def receive_new_frame(data_frame: DataFrame):
+    global num_frames
+    global last_frame
+    last_frame = data_frame
+    num_frames += 1
+
+def record_frame(timestamp, natnet_frame):
+    global data_records
+    frame_data = {}
+    frame_data["timestamp"] = timestamp
+    for b in natnet_frame.rigid_bodies:
+        frame_data[f"x{ b.id_num }"] = b.pos[0] * 1000
+        frame_data[f"y{ b.id_num }"] = b.pos[1] * 1000
+        frame_data[f"z{ b.id_num }"] = b.pos[2] * 1000
+        if b.id_num == 5: # cube
+            frame_data[f"rot_x{ b.id_num }"] = b.rot[0]
+            frame_data[f"rot_y{ b.id_num }"] = b.rot[1]
+            frame_data[f"rot_z{ b.id_num }"] = b.rot[2]
+            frame_data[f"rot_w{ b.id_num }"] = b.rot[3]
+    data_records.append(frame_data)
+
+def frame_to_obs(natnet_frame):
+    if natnet_frame is None:
+        print("Error: No data received from NatNetClient yet.")
+    for b in natnet_frame.rigid_bodies:
+        if b.id_num < 5: # trunk
+            obs = np.append(obs, [b.pos[0] * 1000, b.pos[1] * 1000, b.pos[2] * 1000])
+        else:
+            obs = np.append(obs, goal_position) # goal
+            obs = np.append(obs, [b.pos[0] * 1000, b.pos[1] * 1000, b.pos[2] * 1000]) # cube pos
+            obs = np.append(obs, [b.rot[0], b.rot[1], b.rot[2], b.rot[3]]) # cube rot
+    return obs
+
+def evaluate(obs):
+    goal_pos = obs[12:15]
+    cube_pos = obs[15:18]
+    distance = np.linalg.norm(goal_pos - cube_pos)
+    print("Initial distance: ", distance)
+
+def get_current_date():
+	return datetime.today().strftime('%Y_%m_%d_%H_%M_%S')
+
+def create_dirs(path):
+	try:
+		os.makedirs(os.path.join(path))
+	except OSError as error:
+		pass
+     
+def load_policy(load_path):
+    if os.path.isdir(load_path):
+        run_path = load_path+"/test/"+get_current_date()+"/"
+        create_dirs(run_path)
+        load_path  = os.path.join(load_path, "best_model.zip")
+        assert os.path.exists(load_path), "best_model.zip hasn't been saved because too few evaluations have been performed. Check --eval_freq and -t in train.py"
+        #test_env = gym.make("trunkcube-v0")
+        size_layer=[]
+        for _ in range(2):
+            size_layer.append(128)
+        policy = Policy(algo="ppo",
+                env=None, # check if it's ok
+                device="cpu",
+                seed=0,
+                lr=1e-3, 
+                batch_size=64,
+                size_layer=size_layer,
+                load_from_pathname=load_path)
+    else:
+        raise ValueError(f"{load_path}: data path is not correct")
+    return policy
+
+def main():
+    global num_frames, policy, last_frame, data_records
+    
+    streaming_client = NatNetClient(server_ip_address="193.49.212.238", local_ip_address="193.49.212.156", use_multicast=False)
+    streaming_client.on_data_frame_received_event.handlers.append(receive_new_frame)
+    
+    ard = Arduino(PORT)
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--data_path', default=None, type=str, help='Path to custom offline dataset')
+    parser.add_argument('--max_steps', default=100, type=int, help='Number of steps in a single policy execution')
+    args = parser.parse_args()
+
     if args.data_path is not None:
-         policy = load_actions_from_file(args.data_path)
-         print("Loaded policy from path ", args.data_path)
+            policy = load_policy(args.data_path)
+            print("Loaded policy from path ", args.data_path)
     else:
-         print("ERROR: please provide a policy.")
-         exit()
-    inp = input("Press:\n\t- 'i' to set init position\n\t- 'l' to set low position\n\t- anything else to start the policy\n")
-    if inp == 'i':
-        print("Set init position\n")
-        ard.query(inp)
-    elif inp == 'l':
-        print("Set low position\n")
-        ard.query(inp)
-    else:
-        print("Start the policy\n")
-        times = []
-        dataset = {
-				'observations': [],
-				'actions': [],
-				'next_observations': [],
-				'terminals': []
-			}
-        obs = ... # data from optitrack [format numpy array of shape (1,N)]
-        goal_pos = obs[0][12:15]
-        cube_pos = obs[0][15:18]
-        distance = np.linalg.norm(goal_pos - cube_pos)
-        print("Initial distance: ", distance)
-        dataset['observations'].append(obs[0])
-        ukfs = [filtering.init_ukf(obs[0][i*3:i*3+3]) for i in range(4)]
-        ukfs.append(filtering.init_ukf(obs[0][15:21]))  # Cube pos & rotation
-        for _ in range(args.max_steps):
-            start_time = time.time()
-            action, _states = policy.predict(obs, deterministic = True) # action from policy
-            ard.query(str(action))
-            dataset['actions'].append(action[0])
-            time.sleep(DELAY)
-            obs = ... # data from optitrack
-            goal_pos = obs[0][12:15]
-            cube_pos = obs[0][15:18]
-            distance = np.linalg.norm(goal_pos - cube_pos)
-            done = [False]
-            if filtering_data:
-                obs = apply_ukf_vectorized(ukfs, obs)
-            dataset['next_observations'].append(obs[0])
-            dataset['terminals'].append(done[0])
-            if not done[0]:
-                dataset['observations'].append(obs[0])
-            print("Step ", id ,"- Took action: ", action[0], " - distance", distance)
-            step_time = time.time() - start_time
-            times.append(step_time)
-        print("Final distance: ", distance)
-        print("Policy executed\n")
-        print("--- Tot per episode: %s seconds ---" % (sum(times)))
-        print("--- Avg per steps: %s seconds ---" % (sum(times)/len(times)))
+        print("ERROR: please provide a policy.")
+        exit()
+
+    with streaming_client:
+        streaming_client.request_modeldef()
+
+        while True:
+            inp = input("Press:\n"
+                        "\t- 'i' to set init position\n"
+                        "\t- 'l' to set low position\n"
+                        "\t- 'q' to quit\n"
+                        "\t- anything else to start the policy\n")
+            if inp == 'i':
+                print("Set init position\n")
+                ard.query(inp)
+                time.sleep(255 * 11.2 / 1000)
+                streaming_client.update_sync()
+                for b in last_frame.rigid_bodies:
+                    diff = [abs(pos_i-init_i) for pos_i, init_i in zip([i * 1000 for i in b.pos], INIT_POS[b.id_num -1])]
+                    diff = ["-" if d<5 else "X" for d in diff]
+                    print(f"Id {b.id_num}: {diff}")
+            elif inp == 'l':
+                print("Set low position\n")
+                ard.query(inp)
+            elif inp == 'q':
+                break
+            else:
+                print("Start the policy\n")
+                init_time = time.time()
+                times = []
+                dataset = {
+                        'observations': [],
+                        'actions': [],
+                        'next_observations': [],
+                        'terminals': []
+                    }
+                step = 0
+                last_update = 0
+                streaming_client.update_sync()
+                obs = frame_to_obs(last_frame)
+                evaluate(obs)
+                dataset['observations'].append(obs)
+                ukfs = [filtering.init_ukf(obs[i*3:i*3+3]) for i in range(4)]
+                ukfs.append(filtering.init_ukf(obs[15:21]))  # Cube pos & rotation
+                while step < args.max_steps:
+                    now = time.time()
+                    if (now - last_update) >= DELAY:
+                        action, _states = policy.predict(obs, deterministic = True) # action from policy
+                        ard.query(str(action[0]))
+                        dataset['actions'].append(action[0])
+                        # time.sleep(DELAY) # do I need ?
+                        streaming_client.update_sync()
+                        obs = frame_to_obs(last_frame)
+                        done = [False]
+                        if filtering_data:
+                            obs = apply_ukf_vectorized(ukfs, obs)
+                        evaluate(obs)
+                        dataset['next_observations'].append(obs)
+                        dataset['terminals'].append(done[0])
+                        if not done[0]:
+                            dataset['observations'].append(obs)
+                        step_time = time.time() - last_update
+                        print("Step ", step ,"- Took action: ", action[0], " - distance", distance, " - ", step_time, "s")
+                        times.append(step_time)
+                        last_update = now
+                        step+=1
+                print("Policy executed\n")
+                print("--- Tot per episode: %s seconds ---" % (sum(times)))
+                print("--- Avg per steps: %s seconds ---" % (sum(times)/len(times)))
+
+if __name__ == '__main__':
+    main()
