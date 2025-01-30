@@ -5,51 +5,26 @@
 #define PIN_SW_RX 10
 #define PIN_SW_TX 11
 
-SoftwareSerial   servo_serial(PIN_SW_RX, PIN_SW_TX);
-HerkulexServoBus herkulex_bus(servo_serial);
-HerkulexServo    *servo [8];
-uint16_t servo_positions[8];
-
-unsigned long last_update = 0;
-unsigned long now = 0;
-uint8_t cableId = 0;
-
 const uint8_t NB_CABLES = 8;
 const uint16_t SMIN = 280;
 const uint16_t SMAX = 640;
 const uint16_t LMIN = 1000;
 const uint16_t LMAX = 280;
-const uint16_t INIT[NB_CABLES] = {850, 898, 840, 846, 476, 464, 436, 452};
+const uint16_t INIT[NB_CABLES] = {828, 762, 1000, 798, 600, 492, 560, 440};
 const uint16_t RANGE = 40;
 
-const uint8_t NB_ACTIONS = 100;
-uint8_t actions[NB_ACTIONS] = {5, 5, 5, 5, 5, 12, 12, 12, 7, 7, 7, 3, 3, 3, 3, 13, 13, 13, 5, 5, 5, 5, 4, 4, 4, 0, 0, 0, 2, 13, 13, 13, 13, 6, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13};
-// uint8_t actions[NB_ACTIONS] = {5, 12, 12, 12, 12, 12, 7, 7, 7, 3, 3, 3, 3, 13, 13, 13, 5, 5, 5, 5, 4, 4, 4, 0, 0, 0, 2, 13, 13, 13, 13, 6, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13};
+SoftwareSerial   servo_serial(PIN_SW_RX, PIN_SW_TX);
+HerkulexServoBus herkulex_bus(servo_serial);
+HerkulexServo    *servo [NB_CABLES];
+uint16_t servo_positions[NB_CABLES];
 
-const unsigned long DELAY = 100;
+unsigned long last_update = 0;
+unsigned long now = 0;
+uint8_t cableId = 0;
+
 const uint8_t PLAYTIME = 9; // playtime = time_ms / 11.2
 uint16_t init_time = 0;
 
-
-void displayCables_byFeedback(){
-  for(uint8_t i = 0; i < NB_CABLES; i++) {
-        Serial.print(i);
-        Serial.print(") ");
-        Serial.print(servo[i]->getPosition());
-        Serial.print(" ");
-        }
-  Serial.println();
-}
-
-void displayCables_byArray(){
-  for(uint8_t i = 0; i < NB_CABLES; i++) {
-        Serial.print(i);
-        Serial.print(") ");
-        Serial.print(servo_positions[i]);
-        Serial.print(" ");
-        }
-  Serial.println();
-}
 
 void set_position(uint16_t i, uint16_t position){
   position = (i<4) ? constrain(position, LMAX, LMIN) : constrain(position, SMIN, SMAX);
@@ -93,27 +68,8 @@ void action_to_command(uint16_t action) {
         release_cable(cableId);
 }
 
-void simulate_policy(){
-  uint8_t i = 0;
-  init_time = millis();
-  while( i<NB_ACTIONS) {
-    now = millis();
-    if ( (now - last_update) >= DELAY) {
-      Serial.print("Step: ");
-      Serial.print(i);
-      Serial.print(" - Action: ");
-      Serial.print(actions[i]);
-      Serial.print(" - Time passed: ");
-      Serial.print(millis() - init_time);
-      Serial.println(" ms");
-      action_to_command(actions[i]);
-      last_update = now;
-      i++;
-    }
-  }
-}
-
-void setup_motors() {
+// the setup function runs once when you press reset or power the board
+void setup(){
   Serial.begin(115200);
   servo_serial.begin(115200);
   delay(500);
@@ -124,57 +80,14 @@ void setup_motors() {
   }
   Serial.println();
   delay(1000);
-  // translate_actions(); // adapt the fixed actions array to servo motors control
+  Serial.println("Setup done");
 }
 
-void loop_motors_gui() {
-  herkulex_bus.update();
-
-  if (Serial.available() > 0) {
-    char c = Serial.read();
-    Serial.print(c);
-
-    if(c=='a') {     
-        displayCables_byArray();
-    }
-    else if(c=='f') {
-        displayCables_byFeedback();
-    }
-    else if(c=='l') {
-        for(uint8_t i = 0; i<NB_CABLES; i++) {
-          set_position_low(i);
-        }
-    }
-    else if(c=='i') {
-        for(uint8_t i = 0; i<NB_CABLES; i++) {
-          set_position_init(i);
-        }
-        Serial.println("Initial position done");
-    }
-    else if(c=='s') {
-      Serial.println();
-      simulate_policy();
-    }
-   else{
-      Serial.print("ERROR - Command not recognised");
-   }
-  }
-}
-
-// the setup function runs once when you press reset or power the board
-void setup(){
-  setup_motors();
-}
-
-uint8_t step = 0;
-
-void loop_motors_python() {
+// the loop function runs over and over again forever
+void loop(){
   herkulex_bus.update();
 
   if (Serial.available()) {
-    if (step == 0) {
-      init_time = millis();
-    }
     String a = Serial.readStringUntil('\n');  // read the input until newline
     if (a == "i") {
       for (uint8_t i = 0; i < NB_CABLES; i++) {
@@ -190,19 +103,7 @@ void loop_motors_python() {
     }
     else {
       uint16_t action = a.toInt();  // convert the input to an integer
-      uint16_t time = millis() - init_time;
-      Serial.println("Step: " + String(step) + " - Action: " + String(action) + " - Time passed: " + String(time) + " ms");
       action_to_command(action);
-      delay(DELAY);
-      step += 1;
-      if (step >= 100) {
-        step = 0;
-      }
     }
-  }
-}
-
-// the loop function runs over and over again forever
-void loop(){
-  loop_motors_gui();
+  };
 }
