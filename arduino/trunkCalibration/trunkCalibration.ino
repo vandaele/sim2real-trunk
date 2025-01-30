@@ -5,51 +5,40 @@
 #define PIN_SW_RX 10
 #define PIN_SW_TX 11
 
+const uint8_t NB_CABLES = 8;
+const uint16_t SMIN = 280;
+const uint16_t SMAX = 640;
+const uint16_t LMIN = 1000;
+const uint16_t LMAX = 280;
+// const uint16_t INIT[NB_CABLES] = {930, 766, 1000, 796, 600, 492, 560, 440};
+const uint16_t INIT[NB_CABLES] = {828, 762, 1000, 798, 600, 492, 560, 440};
+const uint16_t RANGE_HIGH = 40;
+const uint16_t RANGE_LOW = 2;
+const uint8_t PLAYTIME = 9; // playtime = time_ms / 11.2
+
 SoftwareSerial   servo_serial(PIN_SW_RX, PIN_SW_TX);
 HerkulexServoBus herkulex_bus(servo_serial);
-HerkulexServo    *servo [8];
-uint16_t servo_positions[8];
+HerkulexServo    *servo [NB_CABLES];
+uint16_t servo_positions[NB_CABLES];
 
 unsigned long last_update = 0;
 unsigned long now = 0;
+String cableIds = "";
 uint8_t cableId = 0;
-
-const uint8_t NB_CABLES = 8;
-const uint16_t SMIN = 297;
-const uint16_t SMAX = 666;
-const uint16_t LMIN = 974;
-const uint16_t LMAX = 297;
-// const uint16_t INIT[NB_CABLES] = {639, 564, 389, 564, 680, 605, 805, 605};
-const uint16_t INIT[NB_CABLES] = {472, 469, 374, 479, 812, 780, 945, 781}; 
-// const uint16_t SINIT = SMIN+abs(SMAX-SMIN)/4;
-// const uint16_t LINIT = LMIN-abs(LMIN-LMAX)/4;
-const uint16_t RANGE = 39;
+uint16_t range = RANGE_HIGH;
+bool torqueOnForAll = true;
+bool torqueOn[NB_CABLES] = {true, true, true, true, true, true, true, true};
 
 const uint8_t NB_ACTIONS = 100;
-uint8_t actions[NB_ACTIONS] = {5, 12, 12, 12, 12, 12, 7, 7, 7, 3, 3, 3, 3, 13, 13, 13, 5, 5, 5, 5, 4, 4, 4, 0, 0, 0, 2, 13, 13, 13, 13, 6, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13};
-//uint8_t actions[NB_ACTIONS] =   {5, 12, 12, 12, 12, 12, 7, 7, 7, 3, 3, 3, 3, 13, 13, 13, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 2, 13, 13, 13, 13, 6, 5, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13,  5, 12, 12, 12, 12, 12,  7,  7,  7,  3,  3,  3,  3};
-//uint8_t actions[NB_ACTIONS] = {5,12,12,12,3,3,7,7,7,13,13,7,12,12,5,5,5,9,9,12,12,12,12,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9}; // CI4OB
-//uint8_t actions[NB_ACTIONS] = {5,12,12,12,3,3,7,7,7,13,13,7,7,7,1,1,1,1,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14}; // 4YADE
+// AKLWI
+const uint8_t actions[NB_ACTIONS] = {5, 12, 12, 12, 7, 7, 3, 3, 7, 7, 13, 13, 11, 11, 11, 11, 1, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14};
+// X0HBR
+// const uint8_t actions[NB_ACTIONS] = {5, 12, 12, 3, 7, 7, 7, 7, 7, 13, 12, 8, 8, 1, 1, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8};
+const unsigned long DELAY = 100;
+uint16_t step = 0;
+uint16_t init_time = 0;
 
-const unsigned long DELAY = 50;
-const uint8_t PLAYTIME = 100;
 
-void translate_actions(){
-  for(uint8_t i = 0; i < NB_ACTIONS; i++) {
-    if (actions[i] < 8)
-      actions[i] = (actions[i] + 4) % 8;
-    else
-      actions[i] = (actions[i] + 4) % 8 + 8;
-  }
-}
-
-uint8_t translate_action(uint8_t action){
-    if (action < 8)
-      action = (action + 4) % 8;
-    else
-      action = (action + 4) % 8 + 8;
-    return action;
-}
 
 void displayCables_byFeedback(){
   for(uint8_t i = 0; i < NB_CABLES; i++) {
@@ -72,154 +61,108 @@ void displayCables_byArray(){
 }
 
 void set_position(uint16_t i, uint16_t position){
-  position = (i<4) ? constrain(position, SMIN, SMAX) : constrain(position, LMAX, LMIN);
+  position = (i<4) ? constrain(position, LMAX, LMIN) : constrain(position, SMIN, SMAX);
   servo[i]->setPosition(position, PLAYTIME);
   servo_positions[i] = position;
 }
 
 void set_position_low(uint16_t i){
-  uint16_t position = (i<4) ? SMIN : LMIN;
-  servo[i]->setPosition(position, 100);
+  uint16_t position = (i<4) ? LMIN : SMIN;
+  servo[i]->setPosition(position, 255);
   servo_positions[i] = position;
 }
 
-void set_position_init(uint16_t i){ /*TODO for horizontal position */
+void set_position_init(uint16_t i){
   uint16_t position = INIT[i];
-  servo[i]->setPosition(position, 100);
+  servo[i]->setPosition(position, 255);
   servo_positions[i] = position;
 }
 
 void pull_cable(uint16_t i){
   uint16_t position = servo_positions[i];
-  position = (i < 4) ? position+RANGE : position-RANGE;
+  position = (i < 4) ? position-range : position+range;
   set_position(i, position);
 }
 
 void release_cable(uint16_t i){
   uint16_t position = servo_positions[i];
-  position = (i < 4) ? position-RANGE : position+RANGE;
+  position = (i < 4) ? position+range : position-range;
   set_position(i, position);
 }
 
+void toggle_torque(uint16_t i){
+  torqueOn[i] = !torqueOn[i];
+  if(torqueOn[i])
+    servo[i]->setTorqueOn();
+  else
+    servo[i]->setTorqueOff();
+}
+
 void action_to_command(uint16_t action) {
-    uint16_t cableId;
-    switch(action) {
-        case 0:
-            cableId = 0;
-            pull_cable(cableId);
-            break;
-        case 1:
-            cableId = 1;
-            pull_cable(cableId);
-            break;
-        case 2:
-            cableId = 2;
-            pull_cable(cableId);
-            break;
-        case 3:
-            cableId = 3;
-            pull_cable(cableId);
-            break;
-        case 4:
-            cableId = 4;
-            pull_cable(cableId);
-            break;
-        case 5:
-            cableId = 5;
-            pull_cable(cableId);
-            break;
-        case 6:
-            cableId = 6;
-            pull_cable(cableId);
-            break;
-        case 7:
-            cableId = 7;
-            pull_cable(cableId);
-            break;
-        case 8:
-            cableId = 0;
-            release_cable(cableId);
-            break;
-        case 9:
-            cableId = 1;
-            release_cable(cableId);
-            break;
-        case 10:
-            cableId = 2;
-            release_cable(cableId);
-            break;
-        case 11:
-            cableId = 3;
-            release_cable(cableId);
-            break;
-        case 12:
-            cableId = 4;
-            release_cable(cableId);
-            break;
-        case 13:
-            cableId = 5;
-            release_cable(cableId);
-            break;
-        case 14:
-            cableId = 6;
-            release_cable(cableId);
-            break;
-        case 15:
-            cableId = 7;
-            release_cable(cableId);
-            break;
+    if(action <0 || action > 15){
+        Serial.println("ERROR: action value not in range [0-15]");
+        return;
     }
+    uint16_t cableId = action%8;
+    if(action < 8)
+        pull_cable(cableId);
+    else
+        release_cable(cableId);
+}
+
+void step_policy(uint16_t i){
+  Serial.print("Step: ");
+  Serial.print(i);
+  Serial.print(" - Action: ");
+  Serial.print(actions[i]);
+  Serial.print(" - Time passed: ");
+  Serial.print(millis() - init_time);
+  Serial.println(" ms");
+  action_to_command(actions[i]);
 }
 
 void simulate_policy(){
-  uint16_t init_time = millis();
-  for(uint8_t i = 0; i<NB_ACTIONS; i++) {
-    Serial.print("Step: ");
-    Serial.print(i);
-    Serial.print(" - Action: ");
-    Serial.print(actions[i]);
-    Serial.print(" - Time passed: ");
-    Serial.print(millis() - init_time);
-    Serial.println(" ms");
-    action_to_command(translate_action(actions[i]));
-    delay(DELAY);
+  step = 0;
+  init_time = millis();
+  while( step < NB_ACTIONS) {
+    now = millis();
+    if ( (now - last_update) >= DELAY) {
+      step_policy(step);
+      last_update = now;
+      step++;
+    }
   }
 }
 
-void setup_motors() {
+void switch_range_value() {
+  range = (range == RANGE_HIGH) ? RANGE_LOW : RANGE_HIGH;
+}
+
+// the setup function runs once when you press reset or power the board
+void setup(){
+  for(uint8_t i = 0; i < NB_CABLES; i++){
+      cableIds.concat(i);
+  }
   Serial.begin(115200);
   servo_serial.begin(115200);
   delay(500);
-  Serial.println("Setup done");
   for(uint8_t i = 0; i<NB_CABLES; i++) {
     servo[i] = new HerkulexServo(herkulex_bus, i);
-    servo[i]->setTorqueOn();  // turn power on
-    // Serial.print(i);
-    // Serial.print(") ");
-    // uint16_t init = (i<4) ? SMIN : LMIN;
-    // servo[i]->setPosition(init, PLAYTIME); // set position to low position
-    // servo_positions[i] = init;
-    // Serial.print(init);
-    // Serial.print(" ");
+    if(torqueOn[i]) { servo[i]->setTorqueOn(); }
   }
-  Serial.println();
   delay(1000);
-  // translate_actions(); // adapt the fixed actions array to servo motors control
+  Serial.println("Setup done");
 }
 
-void loop_motors_gui() {
+// the loop function runs over and over again forever
+void loop(){
   herkulex_bus.update();
 
   if (Serial.available() > 0) {
     char c = Serial.read();
     Serial.print(c);
 
-    // Serial.print("Selected cable: ");
-    // Serial.println(cableId);
-    // displayCables_byArray();
-
-    String ids = "012345678";
-    int isid = ids.indexOf(c);
+    int isid = cableIds.indexOf(c);
     if (isid > -1) {
         // SELECT CABLE
         cableId = c-'0';
@@ -227,12 +170,10 @@ void loop_motors_gui() {
         Serial.println(cableId);
     }
     else if(c == 'p') {
-        // pull cable (plus)
         pull_cable(cableId);
         Serial.print("+ ");
     }
-    else if(c=='m') {
-        // release cable (minus)
+    else if(c=='r') {
         release_cable(cableId);
         Serial.print("- ");
     }
@@ -242,93 +183,53 @@ void loop_motors_gui() {
     else if(c=='f') {
         displayCables_byFeedback();
     }
+    else if(c=='o') {
+        toggle_torque(cableId);
+        Serial.print("motor: ");
+        Serial.println( torqueOn[cableId] ? "ON" : "OFF");
+    }
+    else if(c=='O') {
+        for(uint8_t i = 0; i<NB_CABLES; i++) {
+          torqueOn[i] = torqueOnForAll;
+          toggle_torque(i);
+        }
+        torqueOnForAll = !torqueOnForAll;
+        Serial.print("All motors ");
+        Serial.println(torqueOnForAll ? "ON" : "OFF");
+    }
     else if(c=='l') {
+        set_position_low(cableId);
+    }
+    else if(c=='L') {
         for(uint8_t i = 0; i<NB_CABLES; i++) {
           set_position_low(i);
         }
+        Serial.println("Low position done");
     }
     else if(c=='i') {
+        set_position_init(cableId);
+    }
+    else if(c=='I') {
+      step = 0;
         for(uint8_t i = 0; i<NB_CABLES; i++) {
           set_position_init(i);
         }
         Serial.println("Initial position done");
     }
     else if(c=='s') {
-      Serial.println();
+      step_policy(step);
+      step++;
+    }
+    else if(c=='S') {
       simulate_policy();
     }
-   else{
-      Serial.print("ERROR - Command not recognised");
-   }
-  }
-}
-
-void setup_blink() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(7, OUTPUT);
-  Serial.begin(115200);
-}
-
-void blink_led() {
-  digitalWrite(7, HIGH);  // turn the LED on (HIGH is the voltage level)
-  delay(500);                      // wait for a 500ms
-  digitalWrite(7, LOW);   // turn the LED off by making the voltage LOW
-  delay(500);                      // wait for a 500ms
-}
-
-void blink_led_from_input(){
-  while (!Serial.available());
-  String input = Serial.readStringUntil('\n');  // read the input until newline
-  uint16_t N = input.toInt();  // convert the input to an integer
-  Serial.println(N);
-  for (int i = 0; i < N; i++) {
-    blink_led();
-  }
-}
-
-// the setup function runs once when you press reset or power the board
-void setup(){
-  setup_motors();
-}
-
-uint8_t step = 0;
-uint16_t init_time = millis();
-
-void loop_motors_python() {
-  herkulex_bus.update();
-
-  if (Serial.available()) {
-    if (step == 0) {
-      init_time = millis();
+    else if(c=='c') {
+      switch_range_value();
+      Serial.print("Cable movement range is now ");
+      Serial.println(range);
     }
-    String a = Serial.readStringUntil('\n');  // read the input until newline
-    if (a == "i") {
-      for (uint8_t i = 0; i < NB_CABLES; i++) {
-        set_position_init(i);
-      }
-      Serial.println("Initial position done");
-    }
-    else if (a == "l") {
-      for (uint8_t i = 0; i < NB_CABLES; i++) {
-        set_position_low(i);
-      }
-      Serial.println("Low position done");
-    }
-    else {
-      uint16_t action = a.toInt();  // convert the input to an integer
-      uint16_t time = millis() - init_time;
-      Serial.println("Step: " + String(step) + " - Action: " + String(action) + " - Time passed: " + String(time) + " ms");
-      action_to_command(translate_action(action));
-      delay(DELAY);
-      step += 1;
-      if (step >= 100) {
-        step = 0;
-      }
+    else{
+      Serial.println("ERROR - Command not recognised");
     }
   }
-}
-
-// the loop function runs over and over again forever
-void loop(){
-  loop_motors_python();
 }
