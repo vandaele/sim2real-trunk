@@ -71,8 +71,8 @@ class Policy:
 	def load_model(self, algo, pathname):
 		if algo == 'ppo':
 			model = PPO.load(pathname, env=self.env, device=self.device,
-							 lr=self.lr, batch_size=self.batch_size, size_layer=self.size_layer,
-							 custom_objects={'action_space': self.env.action_space, 'observation_space': self.env.observation_space} )
+							 lr=self.lr, batch_size=self.batch_size, size_layer=self.size_layer,)
+							 # custom_objects={'action_space': self.env.action_space, 'observation_space': self.env.observation_space} )
 		elif algo == 'sac':
 			model = SAC.load(pathname, env=self.env, device=self.device,
 							 lr=self.lr, batch_size=self.batch_size, size_layer=self.size_layer)

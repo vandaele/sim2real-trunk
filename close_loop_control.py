@@ -11,10 +11,11 @@ import numpy as np
 import argparse
 import filtering
 import os
-import datetime
+from datetime import datetime
 from policy.policy import Policy
 
 from natnet_client import DataFrame, NatNetClient
+import pdb
 
 #PORT = '/dev/ttyACM1'
 PORT = '/dev/tty.usbmodem401101'
