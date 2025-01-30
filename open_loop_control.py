@@ -19,9 +19,7 @@ import datetime
 
 PORT = '/dev/tty.usbmodem401101'
 DELAY = 100*0.001
-
-data_records = []  # Store received frames
-action_records = []  # Store actions
+INIT_POS = [[0.1045, -4.1515,37.52175], [2.06775,-19.974,73.605], [5.67975, -40.5375,120.3565], [10.593, -62.528,166.6675], [0.0,-82.819,99.998]]
 
 policy = [5, 5, 5, 5, 5, 12, 12, 12, 7, 7, 7, 3, 3, 3, 3, 13, 13, 13, 5, 5, 5, 5, 4, 4, 4, 0, 0, 0, 2, 13, 13, 13, 13, 6, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13]
 
@@ -40,20 +38,32 @@ def load_actions_from_file(path):
 
 def receive_new_frame(data_frame: DataFrame):
     global num_frames
-    global data_records
-    frame_data = []
-    for b in data_frame.rigid_bodies:
-        frame_data.extend([b.pos[0] * 1000, b.pos[1] * 1000, b.pos[2] * 1000])
-    data_records.append(frame_data)
+    global last_frame
+    last_frame = data_frame
     num_frames += 1
 
+def record_frame(timestamp, natnet_frame):
+    global data_records
+    frame_data = {}
+    frame_data["timestamp"] = timestamp
+    for b in natnet_frame.rigid_bodies:
+        frame_data[f"x{ b.id_num }"] = b.pos[0] * 1000
+        frame_data[f"y{ b.id_num }"] = b.pos[1] * 1000
+        frame_data[f"z{ b.id_num }"] = b.pos[2] * 1000
+        if b.id_num == 5: # cube
+            frame_data[f"rot_x{ b.id_num }"] = b.rot[0]
+            frame_data[f"rot_y{ b.id_num }"] = b.rot[1]
+            frame_data[f"rot_z{ b.id_num }"] = b.rot[2]
+            frame_data[f"rot_w{ b.id_num }"] = b.rot[3]
+    data_records.append(frame_data)
+
 def main():
-    global num_frames, policy
+    global num_frames, policy, last_frame, data_records
     
     streaming_client = NatNetClient(server_ip_address="193.49.212.238", local_ip_address="193.49.212.156", use_multicast=False)
     streaming_client.on_data_frame_received_event.handlers.append(receive_new_frame)
     
-    # ard = Arduino(PORT)
+    ard = Arduino(PORT)
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_path', default=None, type=str, help='Path to custom offline dataset')
@@ -78,62 +88,50 @@ def main():
                         "\t- anything else to start the policy\n")
             if inp == 'i':
                 print("Set init position\n")
-                # ard.query(inp)
+                ard.query(inp)
+                time.sleep(255 * 11.2 / 1000)
+                streaming_client.update_sync()
+                for b in last_frame.rigid_bodies:
+                    diff = [abs(pos_i-init_i) for pos_i, init_i in zip([i * 1000 for i in b.pos], INIT_POS[b.id_num -1])]
+                    diff = ["-" if d<5 else "X" for d in diff]
+                    print(f"Id {b.id_num}: {diff}")
             elif inp == 'l':
                 print("Set low position\n")
-                # ard.query(inp)
+                ard.query(inp)
             elif inp == 'q':
                 break
             else:
                 init_time = time.time()
                 step = 0
                 last_update = 0
-
+                data_records = []  # Store received frames
                 while step < len(policy):
                     now = time.time();
                     if (now - last_update) >= DELAY:
                         streaming_client.update_sync()
-                        print(f"Received {num_frames} frames")
-                        print(data_records[-1])
-                        action_records.append(policy[step])
+                        record_frame(now, last_frame)
                         print(step, now - init_time, " action: ", policy[step])
-                        # ard.query(str(policy[step]))
+                        ard.query(str(policy[step]))
                         last_update = now;
                         step+=1;
                 time.sleep(DELAY)
                 streaming_client.update_sync()
-                print(f"Received {num_frames} frames")
-                print(data_records[-1])
-                print("Policy executed.\nTotal time: ", time.time() - init_time)
+                record_frame(time.time(), last_frame)
+                print(f"Policy executed.\nTotal time: {time.time() - init_time}.\n{len(data_records)} records")
 
-            # Convert collected data into DataFrame
-            df = pd.DataFrame(data_records)
-            df['action'] = action_records
-            
-            # Save data to CSV
-            date = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
-            os.makedirs('optitrack_data', exist_ok=True)
-            csv_filename = f'optitrack_data/collected_data_{date}.csv'
-            df.to_csv(csv_filename, index=False)
-            print(f"Data saved to {csv_filename}")
-            
-            # Process dataset for .npy file
-            observations = df.iloc[:, :-1].values
-            next_observations = np.roll(observations, shift=-1, axis=0)
-            actions = df['action'].values
-            terminals = np.zeros(len(actions), dtype=bool)
-            terminals[-1] = True
-            
-            dataset = {
-                'observations': observations,
-                'next_observations': next_observations,
-                'actions': actions,
-                'terminals': terminals,
-            }
-            
-            npy_filename = f'optitrack_data/collected_data_{date}.npy'
-            np.save(npy_filename, dataset)
-            print(f"Dataset saved to {npy_filename}")
+                # Convert collected data into DataFrame
+                df = pd.DataFrame.from_dict(data_records)
+                actions = policy.tolist()
+                actions.insert(0, -1) # initial position do not have any action
+                df['action'] = actions
+                
+                # Save data to CSV
+                date = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
+                os.makedirs('optitrack_data', exist_ok=True)
+                csv_filename = f'optitrack_data/collected_data_{date}.csv'
+                df.to_csv(csv_filename, index=False)
+                print(f"Data saved to {csv_filename}")
+
 
 if __name__ == '__main__':
     num_frames = 0
