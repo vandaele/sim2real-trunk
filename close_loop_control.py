@@ -22,6 +22,7 @@ PORT = '/dev/tty.usbmodem401101'
 DELAY = 100*0.001
 
 INIT_POS = [[0.1045, -4.1515,37.52175], [2.06775,-19.974,73.605], [5.67975, -40.5375,120.3565], [10.593, -62.528,166.6675], [0.0,-82.819,99.998]]
+THRESHOLD = 5 # Threshold for difference between curent position and INIT_POS
 # Fixed goal position
 goal_position = [100.0, -100.0, 50.0]
 
@@ -84,6 +85,17 @@ def record_frame(timestamp, natnet_frame):
             frame_data[f"rot_z{ b.id_num }"] = b.rot[2]
             frame_data[f"rot_w{ b.id_num }"] = b.rot[3]
     data_records.append(frame_data)
+
+def print_initial_position_diff():
+    max_diff = 0
+    for b in last_frame.rigid_bodies:
+        diff = [abs(pos_i-init_i) for pos_i, init_i in zip([i * 1000 for i in b.pos], INIT_POS[b.id_num -1])]
+        flags = ["-" if d<THRESHOLD else "X" for d in diff]
+        print(f"Id {b.id_num}: {flags} \t", [f"{x:.2f}" for x in diff])
+        if b.id_num < 5:
+            diff.append(max_diff)
+            max_diff = max(diff)
+    print(f"max diff is {max_diff:.2f}")
 
 def frame_to_obs(natnet_frame):
     if natnet_frame is None:
@@ -170,10 +182,7 @@ def main():
                 ard.query(inp)
                 time.sleep(255 * 11.2 / 1000)
                 streaming_client.update_sync()
-                for b in last_frame.rigid_bodies:
-                    diff = [abs(pos_i-init_i) for pos_i, init_i in zip([i * 1000 for i in b.pos], INIT_POS[b.id_num -1])]
-                    diff = ["-" if d<5 else "X" for d in diff]
-                    print(f"Id {b.id_num}: {diff}")
+                print_initial_position_diff()
             elif inp == 'l':
                 print("Set low position\n")
                 ard.query(inp)
@@ -225,6 +234,7 @@ def main():
                 print("--- Avg per steps: %s seconds ---" % (sum(times)/len(times)))
             elif inp == 'q':
                 break
+            
 
 if __name__ == '__main__':
     main()
