@@ -46,6 +46,7 @@ def record_frame(timestamp, natnet_frame):
     global data_records
     frame_data = {}
     frame_data["timestamp"] = timestamp
+    frame_data["frame"] = natnet_frame.prefix.frame_number
     for b in natnet_frame.rigid_bodies:
         frame_data[f"x{ b.id_num }"] = b.pos[0] * 1000
         frame_data[f"y{ b.id_num }"] = b.pos[1] * 1000
