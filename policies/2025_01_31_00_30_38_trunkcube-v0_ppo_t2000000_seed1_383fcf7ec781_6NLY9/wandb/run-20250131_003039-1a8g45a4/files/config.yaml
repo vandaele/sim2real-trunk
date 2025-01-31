@@ -1,0 +1,147 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.5
+    code_path: code/train_udr.py
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.15
+    start_time: 1738279839.940847
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 13
+      - 14
+      - 16
+      - 19
+      - 23
+      4: 3.8.15
+      5: 0.13.5
+      8:
+      - 5
+algo:
+  desc: null
+  value: ppo
+batch_size:
+  desc: null
+  value: 144
+device:
+  desc: null
+  value: cpu
+env:
+  desc: null
+  value: trunkcube-v0
+eval_episodes:
+  desc: null
+  value: 50
+eval_freq:
+  desc: null
+  value: 10000
+group:
+  desc: null
+  value: null
+hostname:
+  desc: null
+  value: 383fcf7ec781
+lr:
+  desc: null
+  value: 0.0001
+n_layers:
+  desc: null
+  value: 3
+n_neurons:
+  desc: null
+  value: 512
+notes:
+  desc: null
+  value: null
+now:
+  desc: null
+  value: 12
+path:
+  desc: null
+  value: runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/
+reduced_sensing:
+  desc: null
+  value: true
+resume:
+  desc: null
+  value: false
+resume_path:
+  desc: null
+  value: null
+resume_wandb:
+  desc: null
+  value: null
+reward_threshold:
+  desc: null
+  value: false
+run_path:
+  desc: null
+  value: null
+seed:
+  desc: null
+  value: 1
+test_env:
+  desc: null
+  value: trunkcube-v0
+test_episodes:
+  desc: null
+  value: 100
+test_render:
+  desc: null
+  value: false
+timesteps:
+  desc: null
+  value: 2000000
+train_dynamics_names:
+  desc: null
+  value:
+    '0': cubeMass
+    '1': frictionCoeff
+    '2': trunkMass
+    '3': trunkPoissonRatio
+    '4': trunkYoungModulus
+train_space_bounds:
+  desc: null
+  value:
+  - - 0.005
+    - 1.0
+  - - 0.01
+    - 1.0
+  - - 0.005
+    - 1.0
+  - - 0.4
+    - 0.5
+  - - 2000.0
+    - 7000.0
+train_uniform_distr:
+  desc: null
+  value:
+  - - 0.09687690179495381
+    - 0.41993689467906115
+  - - 0.1943976092638942
+    - 0.7231212485077365
+  - - 0.005113802943258162
+    - 0.3488329234078325
+  - - 0.430233257263184
+    - 0.439676747423067
+  - - 2733.7794540855652
+    - 4694.083670016785
+unmodeled:
+  desc: null
+  value: null
+verbose:
+  desc: null
+  value: 0
+wandb_mode:
+  desc: null
+  value: online

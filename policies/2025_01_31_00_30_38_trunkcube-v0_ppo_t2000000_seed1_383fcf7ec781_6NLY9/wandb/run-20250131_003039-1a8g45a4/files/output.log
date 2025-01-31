@@ -1,0 +1,46 @@
+Reduced sensing setting
+Sampled uniform DR:
+ [9.68769018e-02 4.19936895e-01 1.94397609e-01 7.23121249e-01
+ 5.11380294e-03 3.48832923e-01 4.30233257e-01 4.39676747e-01
+ 2.73377945e+03 4.69408367e+03]
+--- Policy training start ---
+/home/docker/.conda/envs/sofa_source/lib/python3.8/site-packages/stable_baselines3/ppo/ppo.py:151: UserWarning: You have specified a mini-batch size of 144, but because the `RolloutBuffer` is of size `n_steps * n_envs = 24576`, after every 170 untruncated mini-batches, there will be a truncated mini-batch of size 96
+We recommend using a `batch_size` that is a factor of `n_steps * n_envs`.
+Info: (n_steps=2048 and n_envs=12)
+  warnings.warn(
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_9996_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_19992_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_29988_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_39984_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_49980_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_59976_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_69972_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_79968_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_89964_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_99960_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_109956_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_119952_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_129948_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_139944_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_149940_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_159936_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_169932_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_179928_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_189924_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_199920_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_209916_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_219912_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_229908_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_239904_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_249900_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_259896_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_269892_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_279888_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_289884_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_299880_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_309876_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_319872_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_329868_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_339864_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_349860_steps.zip
+Saving model checkpoint to runs/trunkcube-v0/2025_01_31_00_30_38_trunkcube-v0_ppo_t2000000_seed1_383fcf7ec781_6NLY9/logs/model_ckpt_359856_steps.zip
