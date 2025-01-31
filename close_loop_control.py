@@ -43,9 +43,9 @@ def apply_ukf_vectorized(ukfs, obs):
         ukfs[i].update(obs[i*3:i*3+3])
         obs[i*3:i*3+3] = ukfs[i].x[:3]
 
-    ukfs[4].predict() # cube
-    ukfs[4].update(obs[15:21])
-    obs[15:21] = ukfs[4].x[:7]
+    # ukfs[4].predict() # cube
+    # ukfs[4].update(obs[15:21])
+    # obs[15:21] = ukfs[4].x[:7]
     return obs
 
 def load_actions_from_file(path):
@@ -77,6 +77,7 @@ def record_frame(timestamp, natnet_frame):
 def frame_to_obs(natnet_frame):
     if natnet_frame is None:
         print("Error: No data received from NatNetClient yet.")
+    obs = np.array([])
     for b in natnet_frame.rigid_bodies:
         if b.id_num < 5: # trunk
             obs = np.append(obs, [b.pos[0] * 1000, b.pos[1] * 1000, b.pos[2] * 1000])
@@ -125,6 +126,7 @@ def load_policy(load_path):
 
 def main():
     global num_frames, policy, last_frame, data_records
+    num_frames = 0
     
     streaming_client = NatNetClient(server_ip_address="193.49.212.238", local_ip_address="193.49.212.156", use_multicast=False)
     streaming_client.on_data_frame_received_event.handlers.append(receive_new_frame)
@@ -150,8 +152,8 @@ def main():
             inp = input("Press:\n"
                         "\t- 'i' to set init position\n"
                         "\t- 'l' to set low position\n"
-                        "\t- 'q' to quit\n"
-                        "\t- anything else to start the policy\n")
+                        "\t- 's' start the policy\n"
+                        "\t- 'q' to quit\n")
             if inp == 'i':
                 print("Set init position\n")
                 ard.query(inp)
@@ -164,9 +166,7 @@ def main():
             elif inp == 'l':
                 print("Set low position\n")
                 ard.query(inp)
-            elif inp == 'q':
-                break
-            else:
+            elif inp == 's':
                 print("Start the policy\n")
                 init_time = time.time()
                 times = []
@@ -188,9 +188,9 @@ def main():
                     now = time.time()
                     if (now - last_update) >= DELAY:
                         action, _states = policy.predict(obs, deterministic = True) # action from policy
-                        ard.query(str(action[0]))
-                        dataset['actions'].append(action[0])
-                        # time.sleep(DELAY) # do I need ?
+                        ard.query(str(action))
+                        dataset['actions'].append(action)
+                        time.sleep(DELAY) # do I need ?
                         streaming_client.update_sync()
                         obs = frame_to_obs(last_frame)
                         done = [False]
@@ -202,13 +202,15 @@ def main():
                         if not done[0]:
                             dataset['observations'].append(obs)
                         step_time = time.time() - last_update
-                        print("Step ", step ,"- Took action: ", action[0], " - distance", distance, " - ", step_time, "s")
+                        print("Step ", step ,"- Took action: ", action, " - ", step_time, "s")
                         times.append(step_time)
                         last_update = now
                         step+=1
                 print("Policy executed\n")
                 print("--- Tot per episode: %s seconds ---" % (sum(times)))
                 print("--- Avg per steps: %s seconds ---" % (sum(times)/len(times)))
+            elif inp == 'q':
+                break
 
 if __name__ == '__main__':
     main()

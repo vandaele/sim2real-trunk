@@ -1,6 +1,6 @@
 from stable_baselines3.common.callbacks import BaseCallback
 import pdb
-import wandb
+# import wandb
 import os
 import numpy as np
 
@@ -27,15 +27,15 @@ class WandbRecorderCallback(BaseCallback):
 
         Print stuff on wandb
         """
-        self.n_eval_calls += 1
-        last_mean_reward = self.parent.last_mean_reward
-        # current_timestep = self.parent.n_calls
-        # current_timestep = self.n_eval_calls*self.child_eval_freq
-        current_timestep = self.num_timesteps # this number is multiplied by the number of parallel envs
-        wandb.log({"train_mean_reward"+self.wandb_loss_suffix: last_mean_reward, "timestep": current_timestep}, commit=False)
-        for info, value in self.parent.locals.get('infos')[0].items():
-            wandb.log({info: value}, commit=False)
-        wandb.log(data={}, commit=True)
+        # self.n_eval_calls += 1
+        # last_mean_reward = self.parent.last_mean_reward
+        # # current_timestep = self.parent.n_calls
+        # # current_timestep = self.n_eval_calls*self.child_eval_freq
+        # current_timestep = self.num_timesteps # this number is multiplied by the number of parallel envs
+        # wandb.log({"train_mean_reward"+self.wandb_loss_suffix: last_mean_reward, "timestep": current_timestep}, commit=False)
+        # for info, value in self.parent.locals.get('infos')[0].items():
+        #     wandb.log({info: value}, commit=False)
+        # wandb.log(data={}, commit=True)
         return True
 
 class CheckpointLastCallback(BaseCallback):
