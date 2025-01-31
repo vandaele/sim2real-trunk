@@ -1,0 +1,8 @@
+numpy == 1.24
+pandas
+filterpy
+plotly
+stable-baselines3 == 1.6.2
+torch == 2.0.1
+
+natnet-client @ git+https://github.com/TimSchneider42/python-natnet-client
