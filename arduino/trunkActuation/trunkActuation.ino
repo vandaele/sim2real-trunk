@@ -10,7 +10,7 @@ const uint16_t SMIN = 280;
 const uint16_t SMAX = 640;
 const uint16_t LMIN = 1000;
 const uint16_t LMAX = 280;
-const uint16_t INIT[NB_CABLES] = {828, 762, 1000, 798, 600, 492, 560, 440};
+const uint16_t INIT[NB_CABLES] = {828, 762, 1000, 758, 440, 370, 400, 360};
 const uint16_t RANGE = 40;
 
 SoftwareSerial   servo_serial(PIN_SW_RX, PIN_SW_TX);
