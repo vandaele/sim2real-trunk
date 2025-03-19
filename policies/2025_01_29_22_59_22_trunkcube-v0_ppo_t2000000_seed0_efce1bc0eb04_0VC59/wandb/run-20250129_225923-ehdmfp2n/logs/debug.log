@@ -30,3 +30,34 @@ config: {'env': 'trunkcube-v0', 'test_env': 'trunkcube-v0', 'group': None, 'algo
 2025-01-29 22:59:33,084 INFO    MainThread:482893 [wandb_run.py:_config_callback():1160] config_cb None None {'train_dynamics_names': {0: 'cubeMass', 1: 'frictionCoeff', 2: 'trunkMass', 3: 'trunkPoissonRatio', 4: 'trunkYoungModulus'}}
 2025-01-29 22:59:33,084 INFO    MainThread:482893 [wandb_run.py:_config_callback():1160] config_cb None None {'train_space_bounds': [[0.005, 1.0], [0.01, 1.0], [0.005, 1.0], [0.4, 0.5], [2000.0, 7000.0]]}
 2025-01-29 22:59:33,084 INFO    MainThread:482893 [wandb_run.py:_config_callback():1160] config_cb None None {'train_uniform_distr': [[0.27582467504583336, 0.48893093574806035], [0.427358142033222, 0.7548789150738647], [0.045432801542372336, 0.2612596705330002], [0.4032841928846915, 0.4276410579360002], [5339.775461084875, 6051.442540277387]]}
+2025-02-03 11:32:45,359 INFO    MainThread:482893 [wandb_config.py:__setitem__():148] config set test_dynamics = [[5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7ff9e4620e80>>
+2025-02-03 11:32:45,360 INFO    MainThread:482893 [wandb_run.py:_config_callback():1160] config_cb test_dynamics [[5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]
+ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]] None
+2025-02-03 11:44:40,415 INFO    MainThread:482893 [wandb_run.py:_finish():1746] finishing run andreaprotopapa/SoRo-RL/ehdmfp2n
+2025-02-03 11:44:40,415 INFO    MainThread:482893 [wandb_run.py:_atexit_cleanup():1949] got exitcode: 0
+2025-02-03 11:44:40,415 INFO    MainThread:482893 [wandb_run.py:_restore():1932] restore
+2025-02-03 11:44:40,415 INFO    MainThread:482893 [wandb_run.py:_restore():1938] restore done
+2025-02-03 11:44:47,970 INFO    MainThread:482893 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2025-02-03 11:44:47,971 INFO    MainThread:482893 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2025-02-03 11:44:47,974 INFO    MainThread:482893 [wandb_run.py:_footer_sync_info():3333] logging synced files
