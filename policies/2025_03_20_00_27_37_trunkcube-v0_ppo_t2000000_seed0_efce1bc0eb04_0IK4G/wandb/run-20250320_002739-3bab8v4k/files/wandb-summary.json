@@ -1,0 +1,1 @@
+{"train_mean_reward": 30.877117999999996, "timestep": 2009196, "_timestamp": 1742883833.7029328, "distance": 23.571899551705258, "_runtime": 456974.4110329151, "_step": 200, "train_std_reward": 15.09841577326877, "which_best_model": "best", "test_mean_reward": 28.32243386000001, "test_std_reward": 1.5177950290423343, "_wandb": {"runtime": 461616}}

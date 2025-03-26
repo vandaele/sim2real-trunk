@@ -1,0 +1,28 @@
+Start >>  Test 0
+Test 0- Step 0- Took action: 5- Got reward: -0.049997754- Info: [{'distance': 111.80221903696838}]
+Test 0- Step 1- Took action: 12- Got reward: -0.04744667- Info: [{'distance': 110.61846476259065}]
+Test 0- Step 2- Took action: 12- Got reward: -0.039194364- Info: [{'distance': 106.85331409864378}]
+Test 0- Step 3- Took action: 12- Got reward: -0.022235535- Info: [{'distance': 99.42365736105732}]
+Test 0- Step 4- Took action: 12- Got reward: -0.008258448- Info: [{'distance': 93.61098886275894}]
+Test 0- Step 5- Took action: 7- Got reward: 0.027783878- Info: [{'distance': 79.89558202313604}]
+Test 0- Step 6- Took action: 7- Got reward: 0.06683826- Info: [{'distance': 67.0162302831054}]
+Test 0- Step 7- Took action: 3- Got reward: 0.07840183- Info: [{'distance': 63.57507682365135}]
+Test 0- Step 8- Took action: 3- Got reward: 0.08213025- Info: [{'distance': 62.50015199355526}]
+Test 0- Step 9- Took action: 7- Got reward: 0.12843785- Info: [{'distance': 50.472455184297274}]
+Test 0- Step 10- Took action: 7- Got reward: 0.18965255- Info: [{'distance': 37.893214543790506}]
+Test 0- Step 11- Took action: 13- Got reward: 0.28105795- Info: [{'distance': 24.57604171350377}]
+Test 0- Step 12- Took action: 13- Got reward: 0.4933377- Info: [{'distance': 8.914901925078166}]
+Test 0- Step 13- Took action: 11- Got reward: 0.98702145- Info: [{'distance': 0.836846275714316, 'episode': {'r': 2.167529, 'l': 14, 't': 13.525983}, 'terminal_observation': array([ 6.41149055e+00, -2.73091277e+00,  3.71554965e+01,  2.09663920e+01,
+       -2.66017264e+01,  5.40895456e+01,  6.77390283e+01, -5.79987059e+01,
+        4.77988424e+01,  8.32270639e+01, -9.88131301e+01,  9.38435154e+01,
+        1.00000000e+02, -1.00000000e+02,  5.00000000e+01,  9.91574604e+01,
+       -7.86194682e+01,  4.68212650e+01, -4.36956313e-03,  2.60624609e-01,
+        9.20286076e-03,  9.65386465e-01])}]
+Done >> Test 0- Reward = [array([-0.04999775], dtype=float32), array([-0.04744667], dtype=float32), array([-0.03919436], dtype=float32), array([-0.02223554], dtype=float32), array([-0.00825845], dtype=float32), array([0.02778388], dtype=float32), array([0.06683826], dtype=float32), array([0.07840183], dtype=float32), array([0.08213025], dtype=float32), array([0.12843785], dtype=float32), array([0.18965255], dtype=float32), array([0.28105795], dtype=float32), array([0.4933377], dtype=float32), array([0.98702145], dtype=float32)]- Sum reward: [2.1675289]- Final episode info: [{'distance': 0.836846275714316, 'episode': {'r': 2.167529, 'l': 14, 't': 13.525983}, 'terminal_observation': array([ 6.41149055e+00, -2.73091277e+00,  3.71554965e+01,  2.09663920e+01,
+       -2.66017264e+01,  5.40895456e+01,  6.77390283e+01, -5.79987059e+01,
+        4.77988424e+01,  8.32270639e+01, -9.88131301e+01,  9.38435154e+01,
+        1.00000000e+02, -1.00000000e+02,  5.00000000e+01,  9.91574604e+01,
+       -7.86194682e+01,  4.68212650e+01, -4.36956313e-03,  2.60624609e-01,
+        9.20286076e-03,  9.65386465e-01])}]
+[INFO]  >> Avg final infos: {'distance': 0.836846275714316} - Std final infos: {'distance': 0.0}
+[INFO]  >> Avg cumulative_reward: 2.1675288677215576 - Std cumulative_reward: 0.0
