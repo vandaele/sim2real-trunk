@@ -1,0 +1,161 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.5
+    code_path: code/train_udr.py
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.15
+    start_time: 1742923058.086132
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 2
+      - 3
+      - 13
+      - 14
+      - 16
+      - 19
+      - 23
+      4: 3.8.15
+      5: 0.13.5
+      8:
+      - 5
+algo:
+  desc: null
+  value: ppo
+batch_size:
+  desc: null
+  value: 144
+device:
+  desc: null
+  value: cpu
+env:
+  desc: null
+  value: trunkcube-v0
+eval_episodes:
+  desc: null
+  value: 50
+eval_freq:
+  desc: null
+  value: 10000
+group:
+  desc: null
+  value: null
+hostname:
+  desc: null
+  value: 383fcf7ec781
+lr:
+  desc: null
+  value: 0.0001
+n_layers:
+  desc: null
+  value: 3
+n_neurons:
+  desc: null
+  value: 512
+noisy_setting:
+  desc: null
+  value: true
+notes:
+  desc: null
+  value: null
+now:
+  desc: null
+  value: 12
+path:
+  desc: null
+  value: runs/trunkcube-v0/2025_03_25_18_17_36_trunkcube-v0_ppo_t2000000_seed0_383fcf7ec781_5ASRJ/
+reduced_sensing:
+  desc: null
+  value: true
+resume:
+  desc: null
+  value: false
+resume_path:
+  desc: null
+  value: null
+resume_wandb:
+  desc: null
+  value: null
+reward_threshold:
+  desc: null
+  value: false
+run_path:
+  desc: null
+  value: null
+seed:
+  desc: null
+  value: 0
+test_dynamics:
+  desc: null
+  value: "[[5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]\n [5.0e-02 3.0e-01 4.2e-01 4.5e-01\
+    \ 4.5e+03]\n [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]\n [5.0e-02 3.0e-01 4.2e-01\
+    \ 4.5e-01 4.5e+03]\n [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]\n [5.0e-02 3.0e-01\
+    \ 4.2e-01 4.5e-01 4.5e+03]\n [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]\n [5.0e-02\
+    \ 3.0e-01 4.2e-01 4.5e-01 4.5e+03]\n [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]\n\
+    \ [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]\n [5.0e-02 3.0e-01 4.2e-01 4.5e-01\
+    \ 4.5e+03]\n [5.0e-02 3.0e-01 4.2e-01 4.5e-01 4.5e+03]]"
+test_env:
+  desc: null
+  value: trunkcube-v0
+test_episodes:
+  desc: null
+  value: 100
+test_render:
+  desc: null
+  value: false
+timesteps:
+  desc: null
+  value: 2000000
+train_dynamics_names:
+  desc: null
+  value:
+    '0': cubeMass
+    '1': frictionCoeff
+    '2': trunkMass
+    '3': trunkPoissonRatio
+    '4': trunkYoungModulus
+train_space_bounds:
+  desc: null
+  value:
+  - - 0.005
+    - 1.0
+  - - 0.01
+    - 1.0
+  - - 0.005
+    - 1.0
+  - - 0.4
+    - 0.5
+  - - 2000.0
+    - 7000.0
+train_uniform_distr:
+  desc: null
+  value:
+  - - 0.1096270211358289
+    - 0.7026737876407699
+  - - 0.5857808701569657
+    - 0.6463969753864285
+  - - 0.11792479297639681
+    - 0.8667758449724339
+  - - 0.42936302972340634
+    - 0.44616622326162036
+  - - 3942.5676411603863
+    - 4050.2138074902764
+unmodeled:
+  desc: null
+  value: null
+verbose:
+  desc: null
+  value: 0
+wandb_mode:
+  desc: null
+  value: online
