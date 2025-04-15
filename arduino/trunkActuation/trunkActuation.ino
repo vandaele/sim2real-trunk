@@ -71,9 +71,10 @@ void action_to_command(uint16_t action) {
 // the setup function runs once when you press reset or power the board
 void setup(){
   Serial.begin(115200);
+  Serial.println("Trunk Actuation Firmware");
+  Serial.println("--------------------------");
   servo_serial.begin(115200);
   delay(500);
-  Serial.println("Setup done");
   for(uint8_t i = 0; i<NB_CABLES; i++) {
     servo[i] = new HerkulexServo(herkulex_bus, i);
     servo[i]->setTorqueOn();  // turn power on

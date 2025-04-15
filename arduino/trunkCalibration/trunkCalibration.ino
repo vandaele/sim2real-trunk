@@ -140,10 +140,12 @@ void switch_range_value() {
 
 // the setup function runs once when you press reset or power the board
 void setup(){
+  Serial.begin(115200);
+  Serial.println("Trunk Calibration Firmware");
+  Serial.println("--------------------------");
   for(uint8_t i = 0; i < NB_CABLES; i++){
       cableIds.concat(i);
   }
-  Serial.begin(115200);
   servo_serial.begin(115200);
   delay(500);
   for(uint8_t i = 0; i<NB_CABLES; i++) {
@@ -171,11 +173,9 @@ void loop(){
     }
     else if(c == 'p') {
         pull_cable(cableId);
-        Serial.print("+ ");
     }
     else if(c=='r') {
         release_cable(cableId);
-        Serial.print("- ");
     }
     else if(c=='a') {     
         displayCables_byArray();
