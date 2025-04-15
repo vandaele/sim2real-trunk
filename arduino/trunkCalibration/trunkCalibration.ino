@@ -11,7 +11,7 @@ const uint16_t SMAX = 640;
 const uint16_t LMIN = 1000;
 const uint16_t LMAX = 280;
 // const uint16_t INIT[NB_CABLES] = {930, 766, 1000, 796, 600, 492, 560, 440};
-const uint16_t INIT[NB_CABLES] = {828, 762, 1000, 758, 440, 370, 400, 360};
+const uint16_t INIT[NB_CABLES] = {828, 774, 1000, 758, 456, 370, 400, 360};
 const uint16_t RANGE_HIGH = 40;
 const uint16_t RANGE_LOW = 2;
 const uint8_t PLAYTIME = 9; // playtime = time_ms / 11.2
