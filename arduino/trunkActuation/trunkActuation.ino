@@ -11,6 +11,9 @@ const uint16_t SMAX = 640;
 const uint16_t LMIN = 1000;
 const uint16_t LMAX = 280;
 const uint16_t INIT[NB_CABLES] = {828, 774, 1000, 758, 456, 370, 400, 360};
+const bool SIM_CONSTRAINED = true; // constrain pulling and releasing capbilities to simulation's
+const uint16_t SIM_MAX_PULLING[NB_CABLES] = {8, 11, 10, 10, 4, 5, 6, 6};
+const uint16_t SIM_MAX_RELEASING[NB_CABLES] = {2, 0, 0, 0, 3, 1, 1, 0};
 const uint16_t RANGE = 40;
 
 SoftwareSerial   servo_serial(PIN_SW_RX, PIN_SW_TX);
@@ -47,13 +50,21 @@ void set_position_init(uint16_t i){
 void pull_cable(uint16_t i){
   uint16_t position = servo_positions[i];
   position = (i < 4) ? position-RANGE : position+RANGE;
-  set_position(i, position);
+  if(!SIM_CONSTRAINED || (i < 4 && position >= INIT[i]-SIM_MAX_PULLING[i]*RANGE) || (i >= 4 && position <= INIT[i]+SIM_MAX_PULLING[i]*RANGE)) {
+    set_position(i, position);
+  }
+  else
+    Serial.println("MAX simulation pulling position reached");
 }
 
 void release_cable(uint16_t i){
   uint16_t position = servo_positions[i];
   position = (i < 4) ? position+RANGE : position-RANGE;
-  set_position(i, position);
+  if(!SIM_CONSTRAINED || (i < 4 && position <= INIT[i]+SIM_MAX_RELEASING[i]*RANGE) || (i >= 4 && position >= INIT[i]-SIM_MAX_RELEASING[i]*RANGE)){
+    set_position(i, position);
+  }
+  else
+    Serial.println("MAX simulation releasing position reached");
 }
 
 void action_to_command(uint16_t action) {

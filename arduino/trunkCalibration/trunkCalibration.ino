@@ -12,6 +12,11 @@ const uint16_t LMIN = 1000;
 const uint16_t LMAX = 280;
 // const uint16_t INIT[NB_CABLES] = {930, 766, 1000, 796, 600, 492, 560, 440};
 const uint16_t INIT[NB_CABLES] = {828, 774, 1000, 758, 456, 370, 400, 360};
+
+const bool SIM_CONSTRAINED = false; // constrain pulling and releasing capbilities to simulation's
+const uint16_t SIM_MAX_PULLING[NB_CABLES] = {8, 11, 10, 10, 4, 5, 6, 6};
+const uint16_t SIM_MAX_RELEASING[NB_CABLES] = {2, 0, 0, 0, 3, 1, 1, 0};
+
 const uint16_t RANGE_HIGH = 40;
 const uint16_t RANGE_LOW = 2;
 const uint8_t PLAYTIME = 9; // playtime = time_ms / 11.2
@@ -81,13 +86,21 @@ void set_position_init(uint16_t i){
 void pull_cable(uint16_t i){
   uint16_t position = servo_positions[i];
   position = (i < 4) ? position-range : position+range;
-  set_position(i, position);
+  if(!SIM_CONSTRAINED || (i < 4 && position >= INIT[i]-SIM_MAX_PULLING[i]*RANGE_HIGH) || (i >= 4 && position <= INIT[i]+SIM_MAX_PULLING[i]*RANGE_HIGH)) {
+    set_position(i, position);
+  }
+  else
+    Serial.println("MAX simulation pulling position reached");
 }
 
 void release_cable(uint16_t i){
   uint16_t position = servo_positions[i];
   position = (i < 4) ? position+range : position-range;
-  set_position(i, position);
+  if(!SIM_CONSTRAINED || (i < 4 && position <= INIT[i]+SIM_MAX_RELEASING[i]*RANGE_HIGH) || (i >= 4 && position >= INIT[i]-SIM_MAX_RELEASING[i]*RANGE_HIGH)){
+    set_position(i, position);
+  }
+  else
+    Serial.println("MAX simulation releasing position reached");
 }
 
 void toggle_torque(uint16_t i){
