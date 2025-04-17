@@ -1,0 +1,33 @@
+2025-04-01 18:06:55,738 INFO    MainThread:20 [wandb_setup.py:_flush():68] Configure stats pid to 20
+2025-04-01 18:06:55,738 INFO    MainThread:20 [wandb_setup.py:_flush():68] Loading settings from /home/docker/.config/wandb/settings
+2025-04-01 18:06:55,738 INFO    MainThread:20 [wandb_setup.py:_flush():68] Loading settings from /home/aprotopapa/code/MySofa/sb3-gym-soro/wandb/settings
+2025-04-01 18:06:55,738 INFO    MainThread:20 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2025-04-01 18:06:55,738 INFO    MainThread:20 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train_dropo.py', 'program': 'train_dropo.py'}
+2025-04-01 18:06:55,738 INFO    MainThread:20 [wandb_init.py:_log_setup():476] Logging user logs to results/DROPO/runs/trunkcube-v0/2025_04_01_18_06_54_trunkcube-v0_ppo_t1150000_seed4_efce1bc0eb04_ZIPI7/wandb/run-20250401_180655-hpgu453m/logs/debug.log
+2025-04-01 18:06:55,738 INFO    MainThread:20 [wandb_init.py:_log_setup():477] Logging internal logs to results/DROPO/runs/trunkcube-v0/2025_04_01_18_06_54_trunkcube-v0_ppo_t1150000_seed4_efce1bc0eb04_ZIPI7/wandb/run-20250401_180655-hpgu453m/logs/debug-internal.log
+2025-04-01 18:06:55,739 INFO    MainThread:20 [wandb_init.py:init():516] calling init triggers
+2025-04-01 18:06:55,739 INFO    MainThread:20 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'env': 'trunkcube-v0', 'test_env': 'trunkcube-v0', 'group': None, 'algo': 'ppo', 'lr': 0.0001, 'batch_size': 144, 'n_layers': 3, 'n_neurons': 512, 'now': 12, 'timesteps': 1150000, 'reward_threshold': False, 'eval_freq': 10000, 'eval_episodes': 50, 'test_episodes': 100, 'test_render': False, 'seed': 4, 'device': 'cpu', 'verbose': 0, 'notes': None, 'wandb_mode': 'online', 'resume': True, 'resume_path': 'results/DROPO/runs/trunkcube-v0/2025_03_31_17_28_08_trunkcube-v0_ppo_t2000000_seed4_efce1bc0eb04_ZIPI7', 'resume_wandb': 'hpgu453m', 'run_path': 'results/DROPO', 'n_trajectories': None, 'data': 'custom', 'data_path': None, 'off_policy': None, 'budget': 5000, 'inference_only': False, 'clipping': None, 'initial_info_only': True, 'training_only': True, 'bounds_path': 'runs/DROPO_real/2025_03_25_14_08_45_trunkcube-v0_ppo_t2000000_seed0_3a8b7617d6a9_EOGQU/best_phi.npy', 'unmodeled': None, 'reduced_sensing': True, 'noisy_setting': True, 'no_output': False, 'additive_variance': True, 'normalize': True, 'normalized_phi': False, 'logstdevs': True, 'epsilon': 1e-05, 'scaling': False, 'sample_size': 100, 'clip_episode_length': None, 'temperatureRegularization': True, 'temperatureRegularization_off': False, 'clip_state': None, 'no_resetfree': False}
+2025-04-01 18:06:55,739 INFO    MainThread:20 [wandb_init.py:init():569] starting backend
+2025-04-01 18:06:55,739 INFO    MainThread:20 [wandb_init.py:init():573] setting up manager
+2025-04-01 18:06:55,742 INFO    MainThread:20 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-04-01 18:06:55,745 INFO    MainThread:20 [wandb_init.py:init():580] backend started and connected
+2025-04-01 18:06:55,762 INFO    MainThread:20 [wandb_init.py:init():658] updated telemetry
+2025-04-01 18:06:56,055 INFO    MainThread:20 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2025-04-01 18:06:57,376 INFO    MainThread:20 [wandb_init.py:init():722] run resumed
+2025-04-01 18:06:57,392 INFO    MainThread:20 [wandb_run.py:_on_init():2000] communicating current version
+2025-04-01 18:06:57,528 INFO    MainThread:20 [wandb_run.py:_on_init():2004] got version response upgrade_message: "wandb version 0.19.8 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2025-04-01 18:06:57,528 INFO    MainThread:20 [wandb_init.py:init():728] starting run threads in backend
+2025-04-01 18:06:57,658 INFO    MainThread:20 [wandb_run.py:_console_start():1980] atexit reg
+2025-04-01 18:06:57,658 INFO    MainThread:20 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2025-04-01 18:06:57,659 INFO    MainThread:20 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2025-04-01 18:06:57,659 INFO    MainThread:20 [wandb_run.py:_redirect():1925] Redirects installed.
+2025-04-01 18:06:57,659 INFO    MainThread:20 [wandb_init.py:init():765] run started, returning control to user process
+2025-04-04 05:27:28,140 INFO    MainThread:20 [wandb_run.py:_finish():1746] finishing run andreaprotopapa/SoRo-RL/hpgu453m
+2025-04-04 05:27:28,140 INFO    MainThread:20 [wandb_run.py:_atexit_cleanup():1949] got exitcode: 0
+2025-04-04 05:27:28,140 INFO    MainThread:20 [wandb_run.py:_restore():1932] restore
+2025-04-04 05:27:28,140 INFO    MainThread:20 [wandb_run.py:_restore():1938] restore done
+2025-04-04 05:27:34,695 INFO    MainThread:20 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2025-04-04 05:27:34,696 INFO    MainThread:20 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2025-04-04 05:27:34,699 INFO    MainThread:20 [wandb_run.py:_footer_sync_info():3333] logging synced files

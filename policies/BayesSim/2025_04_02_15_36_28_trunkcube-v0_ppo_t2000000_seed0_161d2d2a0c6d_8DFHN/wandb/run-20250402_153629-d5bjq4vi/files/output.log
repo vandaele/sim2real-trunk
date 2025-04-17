@@ -1,0 +1,231 @@
+40803
+Reduced sensing setting
+Target task: [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+Loading best bounds from  BestBounds/TrunkCube/BayesSim/bounds_3KB8V.txt
+/home/docker/.conda/envs/sofa_source/lib/python3.8/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  logger.warn(
+Exception in thread Thread-7:
+Traceback (most recent call last):
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aprotopapa/code/MySofa/sofa_rl/sofagym/env/common/rpc_server.py", line 416, in dispatch
+    with SimpleThreadedXMLRPCServer(('localhost', port_rpc), requestHandler=RequestHandler) as server:
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/xmlrpc/server.py", line 605, in __init__
+    socketserver.TCPServer.__init__(self, addr, requestHandler, bind_and_activate)
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+/home/docker/.conda/envs/sofa_source/lib/python3.8/site-packages/stable_baselines3/ppo/ppo.py:151: UserWarning: You have specified a mini-batch size of 144, but because the `RolloutBuffer` is of size `n_steps * n_envs = 24576`, after every 170 untruncated mini-batches, there will be a truncated mini-batch of size 96
+We recommend using a `batch_size` that is a factor of `n_steps * n_envs`.
+Info: (n_steps=2048 and n_envs=12)
+  warnings.warn(
+--- Policy training start ---
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_9996_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_19992_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_29988_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_39984_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_49980_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_59976_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_69972_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_79968_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_89964_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_99960_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_109956_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_119952_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_129948_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_139944_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_149940_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_159936_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_169932_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_179928_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_189924_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_199920_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_209916_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_219912_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_229908_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_239904_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_249900_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_259896_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_269892_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_279888_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_289884_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_299880_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_309876_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_319872_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_329868_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_339864_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_349860_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_359856_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_369852_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_379848_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_389844_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_399840_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_409836_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_419832_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_429828_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_439824_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_449820_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_459816_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_469812_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_479808_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_489804_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_499800_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_509796_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_519792_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_529788_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_539784_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_549780_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_559776_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_569772_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_579768_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_589764_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_599760_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_609756_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_619752_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_629748_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_639744_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_649740_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_659736_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_669732_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_679728_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_689724_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_699720_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_709716_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_719712_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_729708_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_739704_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_749700_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_759696_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_769692_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_779688_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_789684_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_799680_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_809676_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_819672_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_829668_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_839664_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_849660_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_859656_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_869652_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_879648_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_889644_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_899640_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_909636_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_919632_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_929628_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_939624_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_949620_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_959616_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_969612_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_979608_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_989604_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_999600_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1009596_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1019592_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1029588_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1039584_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1049580_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1059576_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1069572_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1079568_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1089564_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1099560_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1109556_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1119552_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1129548_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1139544_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1149540_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1159536_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1169532_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1179528_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1189524_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1199520_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1209516_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1219512_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1229508_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1239504_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1249500_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1259496_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1269492_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1279488_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1289484_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1299480_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1309476_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1319472_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1329468_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1339464_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1349460_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1359456_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1369452_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1379448_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1389444_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1399440_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1409436_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1419432_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1429428_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1439424_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1449420_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1459416_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1469412_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1479408_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1489404_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1499400_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1509396_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1519392_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1529388_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1539384_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1549380_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1559376_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1569372_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1579368_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1589364_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1599360_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1609356_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1619352_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1629348_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1639344_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1649340_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1659336_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1669332_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1679328_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1689324_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1699320_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1709316_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1719312_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1729308_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1739304_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1749300_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1759296_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1769292_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1779288_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1789284_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1799280_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1809276_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1819272_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1829268_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1839264_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1849260_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1859256_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1869252_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1879248_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1889244_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1899240_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1909236_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1919232_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1929228_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1939224_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1949220_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1959216_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1969212_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1979208_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1989204_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_1999200_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/logs/model_ckpt_2009196_steps.zip
+--- Policy training done ----
+Mean reward and stdev: 36.93406178 19.104072599377158
+--- TARGET DOMAIN EVALUATION ---
+Target reward and stdev: 58.18049799999997 2.842170943040401e-14

@@ -1,0 +1,38 @@
+2025-04-02 15:36:29,723 INFO    MainThread:408 [wandb_setup.py:_flush():68] Configure stats pid to 408
+2025-04-02 15:36:29,724 INFO    MainThread:408 [wandb_setup.py:_flush():68] Loading settings from /home/docker/.config/wandb/settings
+2025-04-02 15:36:29,724 INFO    MainThread:408 [wandb_setup.py:_flush():68] Loading settings from /home/aprotopapa/code/MySofa/sb3-gym-soro/wandb/settings
+2025-04-02 15:36:29,724 INFO    MainThread:408 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2025-04-02 15:36:29,724 INFO    MainThread:408 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'bayessim_param_inference.py', 'program': 'bayessim_param_inference.py'}
+2025-04-02 15:36:29,724 INFO    MainThread:408 [wandb_init.py:_log_setup():476] Logging user logs to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/wandb/run-20250402_153629-d5bjq4vi/logs/debug.log
+2025-04-02 15:36:29,724 INFO    MainThread:408 [wandb_init.py:_log_setup():477] Logging internal logs to results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/wandb/run-20250402_153629-d5bjq4vi/logs/debug-internal.log
+2025-04-02 15:36:29,724 INFO    MainThread:408 [wandb_init.py:init():516] calling init triggers
+2025-04-02 15:36:29,725 INFO    MainThread:408 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'env': 'trunkcube-v0', 'test_env': 'trunkcube-v0', 'group': None, 'algo': 'ppo', 'lr': 0.0001, 'batch_size': 144, 'n_layers': 3, 'n_neurons': 512, 'now': 12, 'timesteps': 2000000, 'reward_threshold': False, 'eval_freq': 10000, 'eval_episodes': 50, 'test_episodes': 100, 'test_render': False, 'seed': 0, 'device': 'cpu', 'verbose': 0, 'notes': None, 'wandb_mode': 'online', 'resume': False, 'resume_path': None, 'resume_wandb': None, 'run_path': 'results/BayesSim/', 'eps': 0.0, 'noise_var': 0.0, 'dlimit': 50, 'epochs': 10000, 'components': 5, 'model': 'MDRFF', 'true_dist': None, 'n_points': 1000, 'n_trajectories': None, 'data': 'custom', 'data_path': '/home/andrea/MySofa/sb3-gym-soro/Dataset/TrunkCube/20230208-091408_1episodes.npy', 'off_policy': None, 'clipping': None, 'inference_only': False, 'training_only': True, 'bounds_path': 'BestBounds/TrunkCube/BayesSim/bounds_3KB8V.txt', 'unmodeled': None, 'reduced_sensing': True, 'noisy_setting': True}
+2025-04-02 15:36:29,725 INFO    MainThread:408 [wandb_init.py:init():569] starting backend
+2025-04-02 15:36:29,725 INFO    MainThread:408 [wandb_init.py:init():573] setting up manager
+2025-04-02 15:36:29,730 INFO    MainThread:408 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-04-02 15:36:29,733 INFO    MainThread:408 [wandb_init.py:init():580] backend started and connected
+2025-04-02 15:36:29,742 INFO    MainThread:408 [wandb_init.py:init():658] updated telemetry
+2025-04-02 15:36:29,779 INFO    MainThread:408 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2025-04-02 15:36:30,834 INFO    MainThread:408 [wandb_run.py:_on_init():2000] communicating current version
+2025-04-02 15:36:30,984 INFO    MainThread:408 [wandb_run.py:_on_init():2004] got version response upgrade_message: "wandb version 0.19.9 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2025-04-02 15:36:30,984 INFO    MainThread:408 [wandb_init.py:init():728] starting run threads in backend
+2025-04-02 15:36:36,000 INFO    MainThread:408 [wandb_run.py:_console_start():1980] atexit reg
+2025-04-02 15:36:36,001 INFO    MainThread:408 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2025-04-02 15:36:36,002 INFO    MainThread:408 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2025-04-02 15:36:36,002 INFO    MainThread:408 [wandb_run.py:_redirect():1925] Redirects installed.
+2025-04-02 15:36:36,003 INFO    MainThread:408 [wandb_init.py:init():765] run started, returning control to user process
+2025-04-02 15:36:36,012 INFO    MainThread:408 [wandb_config.py:__setitem__():148] config set path = results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/ - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x73302d7d67c0>>
+2025-04-02 15:36:36,013 INFO    MainThread:408 [wandb_run.py:_config_callback():1160] config_cb path results/BayesSim//runs/trunkcube-v0/2025_04_02_15_36_28_trunkcube-v0_ppo_t2000000_seed0_161d2d2a0c6d_8DFHN/ None
+2025-04-02 15:36:36,013 INFO    MainThread:408 [wandb_config.py:__setitem__():148] config set hostname = 161d2d2a0c6d - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x73302d7d67c0>>
+2025-04-02 15:36:36,013 INFO    MainThread:408 [wandb_run.py:_config_callback():1160] config_cb hostname 161d2d2a0c6d None
+2025-04-02 15:36:36,014 INFO    MainThread:408 [wandb_config.py:__setitem__():148] config set target_task = [0.015, 0.3, 0.04, 0.45, 4500.0] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x73302d7d67c0>>
+2025-04-02 15:36:36,014 INFO    MainThread:408 [wandb_run.py:_config_callback():1160] config_cb target_task [0.015, 0.3, 0.04, 0.45, 4500.0] None
+2025-04-06 14:20:58,736 INFO    MainThread:408 [wandb_run.py:_finish():1746] finishing run andreaprotopapa/SoRo-RL/d5bjq4vi
+2025-04-06 14:20:58,736 INFO    MainThread:408 [wandb_run.py:_atexit_cleanup():1949] got exitcode: 0
+2025-04-06 14:20:58,737 INFO    MainThread:408 [wandb_run.py:_restore():1932] restore
+2025-04-06 14:20:58,737 INFO    MainThread:408 [wandb_run.py:_restore():1938] restore done
+2025-04-06 14:21:04,964 INFO    MainThread:408 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2025-04-06 14:21:04,965 INFO    MainThread:408 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2025-04-06 14:21:04,970 INFO    MainThread:408 [wandb_run.py:_footer_sync_info():3333] logging synced files
