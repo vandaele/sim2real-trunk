@@ -1,0 +1,26 @@
+2025-04-14 19:06:24,008 INFO    MainThread:1679542 [wandb_setup.py:_flush():68] Configure stats pid to 1679542
+2025-04-14 19:06:24,008 INFO    MainThread:1679542 [wandb_setup.py:_flush():68] Loading settings from /home/docker/.config/wandb/settings
+2025-04-14 19:06:24,008 INFO    MainThread:1679542 [wandb_setup.py:_flush():68] Loading settings from /home/aprotopapa/code/MySofa/sb3-gym-soro/wandb/settings
+2025-04-14 19:06:24,008 INFO    MainThread:1679542 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2025-04-14 19:06:24,008 INFO    MainThread:1679542 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train_npdr.py', 'program': 'train_npdr.py'}
+2025-04-14 19:06:24,008 INFO    MainThread:1679542 [wandb_init.py:_log_setup():476] Logging user logs to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/wandb/run-20250414_190623-1mxz8tf4/logs/debug.log
+2025-04-14 19:06:24,008 INFO    MainThread:1679542 [wandb_init.py:_log_setup():477] Logging internal logs to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/wandb/run-20250414_190623-1mxz8tf4/logs/debug-internal.log
+2025-04-14 19:06:24,009 INFO    MainThread:1679542 [wandb_init.py:init():516] calling init triggers
+2025-04-14 19:06:24,009 INFO    MainThread:1679542 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'env': 'trunkcube-pyrado-v0', 'test_env': 'trunkcube-pyrado-v0', 'group': None, 'algo': 'ppo', 'lr': 0.0001, 'batch_size': 144, 'n_layers': 3, 'n_neurons': 512, 'now': 12, 'timesteps': 1000000, 'reward_threshold': False, 'eval_freq': 10000, 'eval_episodes': 50, 'test_episodes': 100, 'test_render': False, 'seed': 1, 'device': 'cpu', 'verbose': 0, 'notes': None, 'wandb_mode': 'online', 'resume': True, 'resume_path': 'results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_03_31_17_29_42_trunkcube-pyrado-v0_ppo_t2000000_seed1_6748d0f059d0_PQERI', 'resume_wandb': '1mxz8tf4', 'run_path': 'results/NPDR_Train', 'n_trajectories': None, 'data': 'custom', 'data_path': None, 'off_policy': None, 'inference_only': False, 'clipping': None, 'initial_info_only': True, 'training_only': True, 'bounds_path': 'runs/trunkcube-pyrado-v0/2025_03_26_16_27_26_trunkcube-pyrado-v0_ppo_t2000000_seed0_6748d0f059d0_FYMY0/pyrado_results/', 'unmodeled': None, 'reduced_sensing': True, 'noisy_setting': True, 'no_output': False, 'max_iter': 2, 'num_sbi_rounds': 7, 'num_sim_per_round': 4000, 'simulation_batch_size': 10, 'normalize_posterior': False, 'num_eval_samples': 10, 'training_batch_size': 50, 'print_map': False}
+2025-04-14 19:06:24,009 INFO    MainThread:1679542 [wandb_init.py:init():569] starting backend
+2025-04-14 19:06:24,009 INFO    MainThread:1679542 [wandb_init.py:init():573] setting up manager
+2025-04-14 19:06:24,010 INFO    MainThread:1679542 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-04-14 19:06:24,012 INFO    MainThread:1679542 [wandb_init.py:init():580] backend started and connected
+2025-04-14 19:06:24,020 INFO    MainThread:1679542 [wandb_init.py:init():658] updated telemetry
+2025-04-14 19:06:24,182 INFO    MainThread:1679542 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2025-04-14 19:06:25,079 INFO    MainThread:1679542 [wandb_init.py:init():722] run resumed
+2025-04-14 19:06:25,094 INFO    MainThread:1679542 [wandb_run.py:_on_init():2000] communicating current version
+2025-04-14 19:06:25,258 INFO    MainThread:1679542 [wandb_run.py:_on_init():2004] got version response upgrade_message: "wandb version 0.19.9 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2025-04-14 19:06:25,258 INFO    MainThread:1679542 [wandb_init.py:init():728] starting run threads in backend
+2025-04-14 19:06:25,363 INFO    MainThread:1679542 [wandb_run.py:_console_start():1980] atexit reg
+2025-04-14 19:06:25,364 INFO    MainThread:1679542 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2025-04-14 19:06:25,364 INFO    MainThread:1679542 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2025-04-14 19:06:25,364 INFO    MainThread:1679542 [wandb_run.py:_redirect():1925] Redirects installed.
+2025-04-14 19:06:25,365 INFO    MainThread:1679542 [wandb_init.py:init():765] run started, returning control to user process

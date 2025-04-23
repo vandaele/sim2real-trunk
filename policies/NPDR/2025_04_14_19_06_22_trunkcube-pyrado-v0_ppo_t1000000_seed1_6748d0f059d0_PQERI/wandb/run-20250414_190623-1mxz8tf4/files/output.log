@@ -1,0 +1,192 @@
+46721
+Action space: Discrete(16)
+State space: Box([-1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1.], [ 1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.  1.], (22,), float32)
+Target dynamics: [ 1.5e-02  3.0e-01  4.0e-01  4.5e-01  4.5e+03]
+All clients are closed. Bye Bye.
+list: [[80.0, -100.0, 65]]
+goal: [80.0, -100.0, 65]
+/home/docker/.conda/envs/sofa_source/lib/python3.8/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  logger.warn(
+Exception in thread Thread-7:
+Traceback (most recent call last):
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aprotopapa/code/MySofa/sofa_rl/sofagym/env/common/rpc_server.py", line 416, in dispatch
+    with SimpleThreadedXMLRPCServer(('localhost', port_rpc), requestHandler=RequestHandler) as server:
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/xmlrpc/server.py", line 605, in __init__
+    socketserver.TCPServer.__init__(self, addr, requestHandler, bind_and_activate)
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/socketserver.py", line 466, in server_bind
+    Exception in thread self.socket.bind(self.server_address)Thread-8
+:
+OSErrorTraceback (most recent call last):
+:   File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+[Errno 98] Address already in use
+    self.run()
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aprotopapa/code/MySofa/sofa_rl/sofagym/env/common/rpc_server.py", line 416, in dispatch
+    with SimpleThreadedXMLRPCServer(('localhost', port_rpc), requestHandler=RequestHandler) as server:
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/xmlrpc/server.py", line 605, in __init__
+    socketserver.TCPServer.__init__(self, addr, requestHandler, bind_and_activate)
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Actual control frequency: 10.0Hz
+Actual dim_trunk: 12
+Loading posterior from  runs/trunkcube-pyrado-v0/2025_03_26_16_27_26_trunkcube-pyrado-v0_ppo_t2000000_seed0_6748d0f059d0_FYMY0/pyrado_results/
+[32mLoaded runs/trunkcube-pyrado-v0/2025_03_26_16_27_26_trunkcube-pyrado-v0_ppo_t2000000_seed0_6748d0f059d0_FYMY0/pyrado_results/iter_0_round_19_posterior.pt
+Checkpoint model loaded.
+Resume training from step 1039584.
+--- Policy training start ---
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1039580_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1049576_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1059572_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1069568_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1079564_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1089560_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1099556_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1109552_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1119548_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1129544_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1139540_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1149536_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1159532_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1169528_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1179524_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1189520_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1199516_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1209512_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1219508_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1229504_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1239500_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1249496_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1259492_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1269488_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1279484_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1289480_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1299476_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1309472_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1319468_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1329464_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1339460_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1349456_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1359452_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1369448_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1379444_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1389440_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1399436_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1409432_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1419428_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1429424_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1439420_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1449416_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1459412_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1469408_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1479404_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1489400_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1499396_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1509392_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1519388_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1529384_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1539380_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1549376_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1559372_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1569368_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1579364_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1589360_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1599356_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1609352_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1619348_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1629344_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1639340_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1649336_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1659332_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1669328_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1679324_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1689320_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1699316_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1709312_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1719308_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1729304_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1739300_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1749296_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1759292_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1769288_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1779284_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1789280_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1799276_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1809272_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1819268_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1829264_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1839260_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1849256_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1859252_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1869248_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1879244_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1889240_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1899236_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1909232_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1919228_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1929224_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1939220_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1949216_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1959212_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1969208_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1979204_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1989200_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_1999196_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_2009192_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_2019188_steps.zip
+Saving model checkpoint to results/NPDR_Train/runs/trunkcube-pyrado-v0/2025_04_14_19_06_22_trunkcube-pyrado-v0_ppo_t1000000_seed1_6748d0f059d0_PQERI/logs/model_ckpt_2029184_steps.zip
+--- Policy training done ----
+Mean reward and stdev: 46.41938458 12.129658981561025
+--- TARGET DOMAIN EVALUATION ---
+/home/docker/.conda/envs/sofa_source/lib/python3.8/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  logger.warn(
+/home/docker/.conda/envs/sofa_source/lib/python3.8/site-packages/stable_baselines3/ppo/ppo.py:151: UserWarning: You have specified a mini-batch size of 144, but because the `RolloutBuffer` is of size `n_steps * n_envs = 2048`, after every 14 untruncated mini-batches, there will be a truncated mini-batch of size 32
+We recommend using a `batch_size` that is a factor of `n_steps * n_envs`.
+Info: (n_steps=2048 and n_envs=1)
+  warnings.warn(
+Exception in thread Thread-30:
+Traceback (most recent call last):
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aprotopapa/code/MySofa/sofa_rl/sofagym/env/common/rpc_server.py", line 416, in dispatch
+    with SimpleThreadedXMLRPCServer(('localhost', port_rpc), requestHandler=RequestHandler) as server:
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/xmlrpc/server.py", line 605, in __init__
+    socketserver.TCPServer.__init__(self, addr, requestHandler, bind_and_activate)
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Traceback (most recent call last):
+  File "train_npdr.py", line 626, in <module>
+    main()
+  File "train_npdr.py", line 519, in main
+    policy.load_state_dict(best_policy)
+  File "/home/aprotopapa/code/MySofa/sb3-gym-soro/policy/policy.py", line 295, in load_state_dict
+    self.model.policy.load_state_dict(path_or_state_dict, strict=True)
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/site-packages/torch/nn/modules/module.py", line 2189, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for ActorCriticPolicy:
+	size mismatch for mlp_extractor.policy_net.0.weight: copying a param with shape torch.Size([512, 22]) from checkpoint, the shape in current model is torch.Size([512, 73]).
+	size mismatch for mlp_extractor.value_net.0.weight: copying a param with shape torch.Size([512, 22]) from checkpoint, the shape in current model is torch.Size([512, 73]).
+Exception in thread Thread-9:
+Traceback (most recent call last):
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aprotopapa/code/MySofa/sofa_rl/sofagym/env/common/rpc_server.py", line 528, in deferredStart
+    subprocess.run([config['python_version'], path+"common/rpc_client.py", sdict, str(nb_actions), str(port_rpc)],
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
