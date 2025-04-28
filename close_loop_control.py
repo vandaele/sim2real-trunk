@@ -232,6 +232,7 @@ def main():
                 print("Policy executed\n")
                 print("--- Tot per episode: %s seconds ---" % (sum(times)))
                 print("--- Avg per steps: %s seconds ---" % (sum(times)/len(times)))
+                print("--- Final cube position: %s ---" % [f"{x:.2f}" for x in [i*1000 for i in last_frame.rigid_bodies[-1].pos]])
             elif inp == 'q':
                 break
             
