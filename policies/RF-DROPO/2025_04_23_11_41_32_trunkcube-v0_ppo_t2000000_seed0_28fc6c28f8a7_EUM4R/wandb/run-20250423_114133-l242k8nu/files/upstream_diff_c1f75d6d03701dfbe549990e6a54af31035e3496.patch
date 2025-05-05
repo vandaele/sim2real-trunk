@@ -1,0 +1,256 @@
+diff --git a/Dataset/TrunkPyrado/20240902-210024_1trajectories.npy b/Dataset/TrunkPyrado/20240902-210024_1trajectories.npy
+new file mode 100644
+index 0000000..523e22c
+Binary files /dev/null and b/Dataset/TrunkPyrado/20240902-210024_1trajectories.npy differ
+diff --git a/Dataset/TrunkPyrado/20240904-161707_1trajectories.npy b/Dataset/TrunkPyrado/20240904-161707_1trajectories.npy
+new file mode 100644
+index 0000000..e3910a5
+Binary files /dev/null and b/Dataset/TrunkPyrado/20240904-161707_1trajectories.npy differ
+diff --git a/Dataset/TrunkPyrado/20240905-003310_1trajectories.npy b/Dataset/TrunkPyrado/20240905-003310_1trajectories.npy
+new file mode 100644
+index 0000000..67232ec
+Binary files /dev/null and b/Dataset/TrunkPyrado/20240905-003310_1trajectories.npy differ
+diff --git a/Dataset/TrunkPyrado/20240905-114932_1trajectories.npy b/Dataset/TrunkPyrado/20240905-114932_1trajectories.npy
+new file mode 100644
+index 0000000..5bb10d8
+Binary files /dev/null and b/Dataset/TrunkPyrado/20240905-114932_1trajectories.npy differ
+diff --git a/Dataset/TrunkPyrado/20240905-153719_1trajectories.npy b/Dataset/TrunkPyrado/20240905-153719_1trajectories.npy
+new file mode 100644
+index 0000000..1ddcd36
+Binary files /dev/null and b/Dataset/TrunkPyrado/20240905-153719_1trajectories.npy differ
+diff --git a/core b/core
+new file mode 100644
+index 0000000..c3fa2f3
+Binary files /dev/null and b/core differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_28_24_trunk-v0_ppo_t2000000_seed0_hactarlogin359107_Y8U08/best_model.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_10_28_24_trunk-v0_ppo_t2000000_seed0_hactarlogin359107_Y8U08/best_model.zip
+deleted file mode 100644
+index 596dbe5..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_28_24_trunk-v0_ppo_t2000000_seed0_hactarlogin359107_Y8U08/best_model.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_28_24_trunk-v0_ppo_t2000000_seed0_hactarlogin359107_Y8U08/best_phi.npy b/results/BayesSim/runs/trunk-v0/2023_02_19_10_28_24_trunk-v0_ppo_t2000000_seed0_hactarlogin359107_Y8U08/best_phi.npy
+deleted file mode 100644
+index f56114d..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_28_24_trunk-v0_ppo_t2000000_seed0_hactarlogin359107_Y8U08/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_28_24_trunk-v0_ppo_t2000000_seed0_hactarlogin359107_Y8U08/logs/model_ckpt_19992_steps.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_10_28_24_trunk-v0_ppo_t2000000_seed0_hactarlogin359107_Y8U08/logs/model_ckpt_19992_steps.zip
+deleted file mode 100644
+index 596dbe5..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_28_24_trunk-v0_ppo_t2000000_seed0_hactarlogin359107_Y8U08/logs/model_ckpt_19992_steps.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_34_29_trunk-v0_ppo_t2000000_seed1_hactarlogin359108_01CFU/best_model.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_10_34_29_trunk-v0_ppo_t2000000_seed1_hactarlogin359108_01CFU/best_model.zip
+deleted file mode 100644
+index 2f29b82..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_34_29_trunk-v0_ppo_t2000000_seed1_hactarlogin359108_01CFU/best_model.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_34_29_trunk-v0_ppo_t2000000_seed1_hactarlogin359108_01CFU/best_phi.npy b/results/BayesSim/runs/trunk-v0/2023_02_19_10_34_29_trunk-v0_ppo_t2000000_seed1_hactarlogin359108_01CFU/best_phi.npy
+deleted file mode 100644
+index eaecd20..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_34_29_trunk-v0_ppo_t2000000_seed1_hactarlogin359108_01CFU/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_34_29_trunk-v0_ppo_t2000000_seed1_hactarlogin359108_01CFU/logs/model_ckpt_9996_steps.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_10_34_29_trunk-v0_ppo_t2000000_seed1_hactarlogin359108_01CFU/logs/model_ckpt_9996_steps.zip
+deleted file mode 100644
+index 4019968..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_34_29_trunk-v0_ppo_t2000000_seed1_hactarlogin359108_01CFU/logs/model_ckpt_9996_steps.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_42_59_trunk-v0_ppo_t2000000_seed2_hactarlogin359109_X7QV3/best_phi.npy b/results/BayesSim/runs/trunk-v0/2023_02_19_10_42_59_trunk-v0_ppo_t2000000_seed2_hactarlogin359109_X7QV3/best_phi.npy
+deleted file mode 100644
+index 2361adb..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_42_59_trunk-v0_ppo_t2000000_seed2_hactarlogin359109_X7QV3/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/best_model.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/best_model.zip
+deleted file mode 100644
+index 11ea6db..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/best_model.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/best_phi.npy b/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/best_phi.npy
+deleted file mode 100644
+index 496e23c..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/final_full_state.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/final_full_state.zip
+deleted file mode 100644
+index 1c13278..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/final_full_state.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/final_model.pth b/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/final_model.pth
+deleted file mode 100644
+index f960872..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/final_model.pth and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/logs/model_ckpt_2009196_steps.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/logs/model_ckpt_2009196_steps.zip
+deleted file mode 100644
+index d52da6b..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/logs/model_ckpt_2009196_steps.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/overall_best.pth b/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/overall_best.pth
+deleted file mode 100644
+index 015bd05..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_10_47_34_trunk-v0_ppo_t2000000_seed1_hactarlogin359110_GDASZ/overall_best.pth and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_12_12_29_trunk-v0_ppo_t2000000_seed0_casperlogin92801_BN6X0/best_model.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_12_12_29_trunk-v0_ppo_t2000000_seed0_casperlogin92801_BN6X0/best_model.zip
+deleted file mode 100644
+index 57521df..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_12_12_29_trunk-v0_ppo_t2000000_seed0_casperlogin92801_BN6X0/best_model.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_12_12_29_trunk-v0_ppo_t2000000_seed0_casperlogin92801_BN6X0/best_phi.npy b/results/BayesSim/runs/trunk-v0/2023_02_19_12_12_29_trunk-v0_ppo_t2000000_seed0_casperlogin92801_BN6X0/best_phi.npy
+deleted file mode 100644
+index f56114d..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_12_12_29_trunk-v0_ppo_t2000000_seed0_casperlogin92801_BN6X0/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_12_12_29_trunk-v0_ppo_t2000000_seed0_casperlogin92801_BN6X0/logs/model_ckpt_19992_steps.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_12_12_29_trunk-v0_ppo_t2000000_seed0_casperlogin92801_BN6X0/logs/model_ckpt_19992_steps.zip
+deleted file mode 100644
+index 8727f0a..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_12_12_29_trunk-v0_ppo_t2000000_seed0_casperlogin92801_BN6X0/logs/model_ckpt_19992_steps.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_12_13_09_trunk-v0_ppo_t2000000_seed1_casperlogin92802_G0YZH/best_phi.npy b/results/BayesSim/runs/trunk-v0/2023_02_19_12_13_09_trunk-v0_ppo_t2000000_seed1_casperlogin92802_G0YZH/best_phi.npy
+deleted file mode 100644
+index eaecd20..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_12_13_09_trunk-v0_ppo_t2000000_seed1_casperlogin92802_G0YZH/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_12_14_46_trunk-v0_ppo_t2000000_seed2_casperlogin92803_ORIQS/best_phi.npy b/results/BayesSim/runs/trunk-v0/2023_02_19_12_14_46_trunk-v0_ppo_t2000000_seed2_casperlogin92803_ORIQS/best_phi.npy
+deleted file mode 100644
+index 2361adb..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_12_14_46_trunk-v0_ppo_t2000000_seed2_casperlogin92803_ORIQS/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/best_model.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/best_model.zip
+deleted file mode 100644
+index ff03279..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/best_model.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/best_phi.npy b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/best_phi.npy
+deleted file mode 100644
+index f56114d..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/final_full_state.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/final_full_state.zip
+deleted file mode 100644
+index 1b9e9a2..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/final_full_state.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/final_model.pth b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/final_model.pth
+deleted file mode 100644
+index 2b94c44..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/final_model.pth and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/logs/model_ckpt_2009196_steps.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/logs/model_ckpt_2009196_steps.zip
+deleted file mode 100644
+index 612a65b..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/logs/model_ckpt_2009196_steps.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/overall_best.pth b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/overall_best.pth
+deleted file mode 100644
+index 80a86be..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_11_trunk-v0_ppo_t2000000_seed0_casperlogin92807_QOE6Q/overall_best.pth and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/best_model.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/best_model.zip
+deleted file mode 100644
+index 48d19db..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/best_model.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/best_phi.npy b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/best_phi.npy
+deleted file mode 100644
+index eaecd20..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/final_full_state.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/final_full_state.zip
+deleted file mode 100644
+index 9e07c23..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/final_full_state.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/final_model.pth b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/final_model.pth
+deleted file mode 100644
+index 9ce9f07..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/final_model.pth and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/logs/model_ckpt_2009196_steps.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/logs/model_ckpt_2009196_steps.zip
+deleted file mode 100644
+index 367796a..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/logs/model_ckpt_2009196_steps.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/overall_best.pth b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/overall_best.pth
+deleted file mode 100644
+index 415ff04..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed1_casperlogin92808_H4XPJ/overall_best.pth and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/best_model.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/best_model.zip
+deleted file mode 100644
+index 85570d8..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/best_model.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/best_phi.npy b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/best_phi.npy
+deleted file mode 100644
+index 2361adb..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/final_full_state.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/final_full_state.zip
+deleted file mode 100644
+index 02d5bd7..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/final_full_state.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/final_model.pth b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/final_model.pth
+deleted file mode 100644
+index 63b1d69..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/final_model.pth and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/logs/model_ckpt_2009196_steps.zip b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/logs/model_ckpt_2009196_steps.zip
+deleted file mode 100644
+index 46570b9..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/logs/model_ckpt_2009196_steps.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/overall_best.pth b/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/overall_best.pth
+deleted file mode 100644
+index 6c8fd23..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_01_25_trunk-v0_ppo_t2000000_seed2_casperlogin92809_288YX/overall_best.pth and /dev/null differ
+diff --git a/results/BayesSim/runs/trunk-v0/2023_02_19_13_03_01_trunk-v0_ppo_t2000000_seed2_casperlogin92810_CLZ6V/best_phi.npy b/results/BayesSim/runs/trunk-v0/2023_02_19_13_03_01_trunk-v0_ppo_t2000000_seed2_casperlogin92810_CLZ6V/best_phi.npy
+deleted file mode 100644
+index 4bda2e1..0000000
+Binary files a/results/BayesSim/runs/trunk-v0/2023_02_19_13_03_01_trunk-v0_ppo_t2000000_seed2_casperlogin92810_CLZ6V/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_10_23_20_trunkcube-v0_ppo_t2000000_seed1_hactarlogin359104_OXRR5/best_phi.npy b/results/BayesSim/runs/trunkcube-v0/2023_02_19_10_23_20_trunkcube-v0_ppo_t2000000_seed1_hactarlogin359104_OXRR5/best_phi.npy
+deleted file mode 100644
+index 4bb2c36..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_10_23_20_trunkcube-v0_ppo_t2000000_seed1_hactarlogin359104_OXRR5/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_10_23_55_trunkcube-v0_ppo_t2000000_seed2_hactarlogin359105_5LFMS/best_phi.npy b/results/BayesSim/runs/trunkcube-v0/2023_02_19_10_23_55_trunkcube-v0_ppo_t2000000_seed2_hactarlogin359105_5LFMS/best_phi.npy
+deleted file mode 100644
+index 827d34b..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_10_23_55_trunkcube-v0_ppo_t2000000_seed2_hactarlogin359105_5LFMS/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_10_25_28_trunkcube-v0_ppo_t2000000_seed0_hactarlogin359106_USDY3/best_phi.npy b/results/BayesSim/runs/trunkcube-v0/2023_02_19_10_25_28_trunkcube-v0_ppo_t2000000_seed0_hactarlogin359106_USDY3/best_phi.npy
+deleted file mode 100644
+index 8ee3aa7..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_10_25_28_trunkcube-v0_ppo_t2000000_seed0_hactarlogin359106_USDY3/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_12_10_05_trunkcube-v0_ppo_t2000000_seed0_casperlogin92798_OMOPA/best_phi.npy b/results/BayesSim/runs/trunkcube-v0/2023_02_19_12_10_05_trunkcube-v0_ppo_t2000000_seed0_casperlogin92798_OMOPA/best_phi.npy
+deleted file mode 100644
+index 8ee3aa7..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_12_10_05_trunkcube-v0_ppo_t2000000_seed0_casperlogin92798_OMOPA/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_12_10_36_trunkcube-v0_ppo_t2000000_seed1_casperlogin92799_1F29Y/best_phi.npy b/results/BayesSim/runs/trunkcube-v0/2023_02_19_12_10_36_trunkcube-v0_ppo_t2000000_seed1_casperlogin92799_1F29Y/best_phi.npy
+deleted file mode 100644
+index 4bb2c36..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_12_10_36_trunkcube-v0_ppo_t2000000_seed1_casperlogin92799_1F29Y/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_12_11_01_trunkcube-v0_ppo_t2000000_seed2_casperlogin92800_JMRKP/best_phi.npy b/results/BayesSim/runs/trunkcube-v0/2023_02_19_12_11_01_trunkcube-v0_ppo_t2000000_seed2_casperlogin92800_JMRKP/best_phi.npy
+deleted file mode 100644
+index 827d34b..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_12_11_01_trunkcube-v0_ppo_t2000000_seed2_casperlogin92800_JMRKP/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_09_trunkcube-v0_ppo_t2000000_seed2_casperlogin92806_Y5PED/best_model.zip b/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_09_trunkcube-v0_ppo_t2000000_seed2_casperlogin92806_Y5PED/best_model.zip
+deleted file mode 100644
+index 5d9e840..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_09_trunkcube-v0_ppo_t2000000_seed2_casperlogin92806_Y5PED/best_model.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_09_trunkcube-v0_ppo_t2000000_seed2_casperlogin92806_Y5PED/best_phi.npy b/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_09_trunkcube-v0_ppo_t2000000_seed2_casperlogin92806_Y5PED/best_phi.npy
+deleted file mode 100644
+index 827d34b..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_09_trunkcube-v0_ppo_t2000000_seed2_casperlogin92806_Y5PED/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_09_trunkcube-v0_ppo_t2000000_seed2_casperlogin92806_Y5PED/logs/model_ckpt_1889244_steps.zip b/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_09_trunkcube-v0_ppo_t2000000_seed2_casperlogin92806_Y5PED/logs/model_ckpt_1889244_steps.zip
+deleted file mode 100644
+index 9563333..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_09_trunkcube-v0_ppo_t2000000_seed2_casperlogin92806_Y5PED/logs/model_ckpt_1889244_steps.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed0_casperlogin92804_OPUHG/best_model.zip b/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed0_casperlogin92804_OPUHG/best_model.zip
+deleted file mode 100644
+index 5bcd708..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed0_casperlogin92804_OPUHG/best_model.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed0_casperlogin92804_OPUHG/best_phi.npy b/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed0_casperlogin92804_OPUHG/best_phi.npy
+deleted file mode 100644
+index 8ee3aa7..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed0_casperlogin92804_OPUHG/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed0_casperlogin92804_OPUHG/logs/model_ckpt_739704_steps.zip b/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed0_casperlogin92804_OPUHG/logs/model_ckpt_739704_steps.zip
+deleted file mode 100644
+index 6026661..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed0_casperlogin92804_OPUHG/logs/model_ckpt_739704_steps.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed1_casperlogin92805_KPCIO/best_model.zip b/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed1_casperlogin92805_KPCIO/best_model.zip
+deleted file mode 100644
+index 5cc329e..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed1_casperlogin92805_KPCIO/best_model.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed1_casperlogin92805_KPCIO/best_phi.npy b/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed1_casperlogin92805_KPCIO/best_phi.npy
+deleted file mode 100644
+index 4bb2c36..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed1_casperlogin92805_KPCIO/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed1_casperlogin92805_KPCIO/logs/model_ckpt_839664_steps.zip b/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed1_casperlogin92805_KPCIO/logs/model_ckpt_839664_steps.zip
+deleted file mode 100644
+index fafe50c..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_02_19_13_01_10_trunkcube-v0_ppo_t2000000_seed1_casperlogin92805_KPCIO/logs/model_ckpt_839664_steps.zip and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_06_11_16_32_27_trunkcube-v0_ppo_t2000000_seed0_hactarlogin368681_85WGO/best_phi.npy b/results/BayesSim/runs/trunkcube-v0/2023_06_11_16_32_27_trunkcube-v0_ppo_t2000000_seed0_hactarlogin368681_85WGO/best_phi.npy
+deleted file mode 100644
+index 254a131..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_06_11_16_32_27_trunkcube-v0_ppo_t2000000_seed0_hactarlogin368681_85WGO/best_phi.npy and /dev/null differ
+diff --git a/results/BayesSim/runs/trunkcube-v0/2023_06_11_16_39_30_trunkcube-v0_ppo_t2000000_seed1_hactarlogin368683_J5XHQ/best_phi.npy b/results/BayesSim/runs/trunkcube-v0/2023_06_11_16_39_30_trunkcube-v0_ppo_t2000000_seed1_hactarlogin368683_J5XHQ/best_phi.npy
+deleted file mode 100644
+index 696d064..0000000
+Binary files a/results/BayesSim/runs/trunkcube-v0/2023_06_11_16_39_30_trunkcube-v0_ppo_t2000000_seed1_hactarlogin368683_J5XHQ/best_phi.npy and /dev/null differ
+diff --git a/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_03_57_trunkwall-v0_ppo_t2000000_seed3_hactarlogin359127_ZXSJB/best_model.zip b/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_03_57_trunkwall-v0_ppo_t2000000_seed3_hactarlogin359127_ZXSJB/best_model.zip
+deleted file mode 100644
+index 6bc2afe..0000000
+Binary files a/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_03_57_trunkwall-v0_ppo_t2000000_seed3_hactarlogin359127_ZXSJB/best_model.zip and /dev/null differ
+diff --git a/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_03_57_trunkwall-v0_ppo_t2000000_seed3_hactarlogin359127_ZXSJB/logs/model_ckpt_929628_steps.zip b/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_03_57_trunkwall-v0_ppo_t2000000_seed3_hactarlogin359127_ZXSJB/logs/model_ckpt_929628_steps.zip
+deleted file mode 100644
+index 77b434e..0000000
+Binary files a/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_03_57_trunkwall-v0_ppo_t2000000_seed3_hactarlogin359127_ZXSJB/logs/model_ckpt_929628_steps.zip and /dev/null differ
+diff --git a/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_04_27_trunkwall-v0_ppo_t2000000_seed2_hactarlogin359126_QZ6IR/best_model.zip b/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_04_27_trunkwall-v0_ppo_t2000000_seed2_hactarlogin359126_QZ6IR/best_model.zip
+deleted file mode 100644
+index 401ca8f..0000000
+Binary files a/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_04_27_trunkwall-v0_ppo_t2000000_seed2_hactarlogin359126_QZ6IR/best_model.zip and /dev/null differ
+diff --git a/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_04_27_trunkwall-v0_ppo_t2000000_seed2_hactarlogin359126_QZ6IR/logs/model_ckpt_1569372_steps.zip b/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_04_27_trunkwall-v0_ppo_t2000000_seed2_hactarlogin359126_QZ6IR/logs/model_ckpt_1569372_steps.zip
+deleted file mode 100644
+index 69e9eec..0000000
+Binary files a/results/FIXED_DR/runs/trunkwall-v0/2023_02_19_22_04_27_trunkwall-v0_ppo_t2000000_seed2_hactarlogin359126_QZ6IR/logs/model_ckpt_1569372_steps.zip and /dev/null differ
