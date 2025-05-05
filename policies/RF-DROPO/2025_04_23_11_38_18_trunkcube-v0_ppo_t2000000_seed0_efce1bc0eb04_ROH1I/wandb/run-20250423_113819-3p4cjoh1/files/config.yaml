@@ -1,0 +1,200 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.5
+    code_path: code/train_dropo.py
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.19
+    start_time: 1745401099.247471
+    t:
+      1:
+      - 1
+      - 5
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 53
+      - 55
+      3:
+      - 2
+      - 3
+      - 13
+      - 14
+      - 16
+      - 19
+      - 23
+      4: 3.8.19
+      5: 0.13.5
+      8:
+      - 5
+additive_variance:
+  desc: null
+  value: true
+algo:
+  desc: null
+  value: ppo
+batch_size:
+  desc: null
+  value: 144
+bounds_path:
+  desc: null
+  value: runs/DROPO_real/runs/trunkcube-v0/2025_04_16_16_48_13_trunkcube-v0_ppo_t2000000_seed0_efce1bc0eb04_JMS7F/best_phi.npy
+budget:
+  desc: null
+  value: 5000
+clip_episode_length:
+  desc: null
+  value: null
+clip_state:
+  desc: null
+  value: null
+clipping:
+  desc: null
+  value: null
+data:
+  desc: null
+  value: custom
+data_path:
+  desc: null
+  value: null
+device:
+  desc: null
+  value: cpu
+env:
+  desc: null
+  value: trunkcube-v0
+epsilon:
+  desc: null
+  value: 1.0e-05
+eval_episodes:
+  desc: null
+  value: 50
+eval_freq:
+  desc: null
+  value: 10000
+group:
+  desc: null
+  value: null
+hostname:
+  desc: null
+  value: efce1bc0eb04
+inference_only:
+  desc: null
+  value: false
+initial_info_only:
+  desc: null
+  value: true
+logstdevs:
+  desc: null
+  value: true
+lr:
+  desc: null
+  value: 0.0001
+n_layers:
+  desc: null
+  value: 3
+n_neurons:
+  desc: null
+  value: 512
+n_trajectories:
+  desc: null
+  value: null
+no_output:
+  desc: null
+  value: false
+no_resetfree:
+  desc: null
+  value: false
+noisy_setting:
+  desc: null
+  value: true
+normalize:
+  desc: null
+  value: true
+normalized_phi:
+  desc: null
+  value: false
+notes:
+  desc: null
+  value: null
+now:
+  desc: null
+  value: 12
+off_policy:
+  desc: null
+  value: null
+path:
+  desc: null
+  value: results/DROPO/runs/trunkcube-v0/2025_04_23_11_38_18_trunkcube-v0_ppo_t2000000_seed0_efce1bc0eb04_ROH1I/
+reduced_sensing:
+  desc: null
+  value: true
+resume:
+  desc: null
+  value: false
+resume_path:
+  desc: null
+  value: null
+resume_wandb:
+  desc: null
+  value: null
+reward_threshold:
+  desc: null
+  value: false
+run_path:
+  desc: null
+  value: results/DROPO
+sample_size:
+  desc: null
+  value: 100
+scaling:
+  desc: null
+  value: false
+seed:
+  desc: null
+  value: 0
+target_task:
+  desc: null
+  value: "[[1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]\n [1.5e-02 3.0e-01 4.0e-02 4.5e-01\
+    \ 4.5e+03]\n [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]\n [1.5e-02 3.0e-01 4.0e-02\
+    \ 4.5e-01 4.5e+03]\n [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]\n [1.5e-02 3.0e-01\
+    \ 4.0e-02 4.5e-01 4.5e+03]\n [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]\n [1.5e-02\
+    \ 3.0e-01 4.0e-02 4.5e-01 4.5e+03]\n [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]\n\
+    \ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]\n [1.5e-02 3.0e-01 4.0e-02 4.5e-01\
+    \ 4.5e+03]\n [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]]"
+temperatureRegularization:
+  desc: null
+  value: true
+temperatureRegularization_off:
+  desc: null
+  value: false
+test_env:
+  desc: null
+  value: trunkcube-v0
+test_episodes:
+  desc: null
+  value: 100
+test_render:
+  desc: null
+  value: false
+timesteps:
+  desc: null
+  value: 2000000
+training_only:
+  desc: null
+  value: true
+unmodeled:
+  desc: null
+  value: null
+verbose:
+  desc: null
+  value: 0
+wandb_mode:
+  desc: null
+  value: online
