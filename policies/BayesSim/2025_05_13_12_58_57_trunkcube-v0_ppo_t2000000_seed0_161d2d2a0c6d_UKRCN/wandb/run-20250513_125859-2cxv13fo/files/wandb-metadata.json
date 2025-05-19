@@ -1,0 +1,135 @@
+{
+    "os": "Linux-6.8.0-52-generic-x86_64-with-glibc2.17",
+    "python": "3.8.15",
+    "heartbeatAt": "2025-05-13T10:59:00.377371",
+    "startedAt": "2025-05-13T10:58:59.278191",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--env",
+        "trunkcube-v0",
+        "--test_env",
+        "trunkcube-v0",
+        "--seed",
+        "0",
+        "--now",
+        "12",
+        "-t",
+        "2000000",
+        "--run_path",
+        "results/BayesSim/",
+        "--training_only",
+        "--bounds_path",
+        "BestBounds/TrunkCube/BayesSim_real/YYI0X.txt",
+        "--reduced_sensing",
+        "--noisy_setting"
+    ],
+    "state": "running",
+    "program": "bayessim_param_inference.py",
+    "codePath": "bayessim_param_inference.py",
+    "git": {
+        "remote": "https://github.com/andreaprotopapa/sb3-gym-soro.git",
+        "commit": "443e9153fd2adbcc597df0b591d4212d1ee18148"
+    },
+    "email": "protopapa.andrea@libero.it",
+    "root": "/home/aprotopapa/code/MySofa/sb3-gym-soro",
+    "host": "161d2d2a0c6d",
+    "username": "docker",
+    "executable": "/home/docker/.conda/envs/sofa_source/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 1331.387375,
+        "min": 1200.0,
+        "max": 4425.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1660.493,
+            "min": 1200.0,
+            "max": 4400.0
+        },
+        {
+            "current": 1399.937,
+            "min": 1200.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 4400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 4400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1199.667,
+            "min": 1200.0,
+            "max": 4400.0
+        },
+        {
+            "current": 1200.076,
+            "min": 1200.0,
+            "max": 4400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 4400.0
+        },
+        {
+            "current": 1200.143,
+            "min": 1200.0,
+            "max": 4400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1200.375,
+            "min": 1200.0,
+            "max": 4400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 4400.0
+        },
+        {
+            "current": 1200.42,
+            "min": 1200.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1199.933,
+            "min": 1200.0,
+            "max": 4400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 4400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 4400.0
+        }
+    ],
+    "disk": {
+        "total": 914.8780059814453,
+        "used": 185.29912948608398
+    },
+    "memory": {
+        "total": 62.476051330566406
+    }
+}

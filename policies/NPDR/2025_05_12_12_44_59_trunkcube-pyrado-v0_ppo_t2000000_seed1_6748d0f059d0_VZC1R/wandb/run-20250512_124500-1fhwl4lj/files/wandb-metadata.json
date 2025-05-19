@@ -1,0 +1,211 @@
+{
+    "os": "Linux-6.8.0-59-generic-x86_64-with-glibc2.17",
+    "python": "3.8.15",
+    "heartbeatAt": "2025-05-12T10:45:02.015589",
+    "startedAt": "2025-05-12T10:45:00.980525",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--seed",
+        "1",
+        "--now",
+        "12",
+        "-t",
+        "2000000",
+        "--run_path",
+        "results/NPDR_Train",
+        "--training_only",
+        "--bounds_path",
+        "runs/trunkcube-pyrado-v0//2025_05_11_18_33_37_trunkcube-pyrado-v0_ppo_t2000000_seed0_6748d0f059d0_LTHCI/pyrado_results/",
+        "--reduced_sensing",
+        "--noisy_setting"
+    ],
+    "state": "running",
+    "program": "train_npdr.py",
+    "codePath": "train_npdr.py",
+    "git": {
+        "remote": "https://github.com/andreaprotopapa/sb3-gym-soro.git",
+        "commit": "443e9153fd2adbcc597df0b591d4212d1ee18148"
+    },
+    "email": "protopapa.andrea@libero.it",
+    "root": "/home/aprotopapa/code/MySofa/sb3-gym-soro",
+    "host": "6748d0f059d0",
+    "username": "docker",
+    "executable": "/home/docker/.conda/envs/sofa_source/bin/python",
+    "cpu_count": 16,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 2618.27115625,
+        "min": 2200.0,
+        "max": 3500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2150.698,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3593.212,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2052.659,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2195.797,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3598.421,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3597.266,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3589.28,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3435.373,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2053.281,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2800.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3592.226,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3500.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3500.0
+        }
+    ],
+    "disk": {
+        "total": 5543.877464294434,
+        "used": 5082.217388153076
+    },
+    "memory": {
+        "total": 62.698280334472656
+    }
+}
