@@ -17,7 +17,7 @@ import pandas as pd
 import os
 import datetime
 
-PORT = '/dev/tty.usbmodem401101'
+PORT = '/dev/tty.usbmodem11301'
 DELAY = 100*0.001
 INIT_POS = [[0.1045, -4.1515,37.52175], [2.06775,-19.974,73.605], [5.67975, -40.5375,120.3565], [10.593, -62.528,166.6675], [0.0,-82.819,99.998]]
 
