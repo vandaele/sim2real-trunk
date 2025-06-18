@@ -151,7 +151,7 @@ def main():
     global num_frames, policy, last_frame, data_records
     num_frames = 0
     
-    streaming_client = NatNetClient(server_ip_address="193.49.212.238", local_ip_address="193.49.212.156", use_multicast=True)
+    streaming_client = NatNetClient(server_ip_address="193.51.236.195", local_ip_address="193.51.236.48")
     streaming_client.on_data_frame_received_event.handlers.append(receive_new_frame)
     
     ard = Arduino(PORT)
