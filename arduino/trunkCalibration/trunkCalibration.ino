@@ -10,8 +10,8 @@ const uint16_t SMIN = 280;
 const uint16_t SMAX = 640;
 const uint16_t LMIN = 1000;
 const uint16_t LMAX = 280;
-// const uint16_t INIT[NB_CABLES] = {828, 774, 1000, 758, 456, 370, 400, 360};
-const uint16_t INIT[NB_CABLES] = {828, 706, 1000, 758, 456, 404, 400, 360};
+// const uint16_t INIT[NB_CABLES] = {828, 706, 1000, 758, 456, 404, 400, 360};
+const uint16_t INIT[NB_CABLES] = {828, 706, 1000, 758, 472, 404, 400, 360};
 
 const bool SIM_CONSTRAINED = false; // constrain pulling and releasing capbilities to simulation's
 const uint16_t SIM_MAX_PULLING[NB_CABLES] = {8, 11, 10, 10, 4, 5, 6, 6};
