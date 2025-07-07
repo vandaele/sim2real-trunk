@@ -1,0 +1,219 @@
+51145
+Reduced sensing setting
+Action space: Discrete(16)
+State space: Box([-1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1.
+ -1. -1. -1. -1.], [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.], (22,), float32)
+Target dynamics: [[1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]]
+Loading best bounds from  runs/DROPO_real/runs/trunkcube-v0/2025_05_11_18_21_09_trunkcube-v0_ppo_t2000000_seed0_efce1bc0eb04_5T7L0/best_phi.npy
+Denormalized means and st.devs:
+---------------
+/home/docker/.conda/envs/sofa_source/lib/python3.8/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  logger.warn(
+cubeMass:	0.00816, 0.11929
+frictionCoeff:	3.79541, 3.75216
+trunkMass:	3.8717, 0.52116
+trunkPoissonRatio:	3.72981, 3.86096
+trunkYoungModulus:	0.16403, 3.93916
+Checkpoint model loaded.
+Resume training from step 189924.
+--- Policy training start ---
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_189920_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_199916_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_209912_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_219908_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_229904_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_239900_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_249896_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_259892_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_269888_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_279884_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_289880_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_299876_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_309872_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_319868_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_329864_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_339860_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_349856_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_359852_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_369848_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_379844_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_389840_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_399836_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_409832_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_419828_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_429824_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_439820_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_449816_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_459812_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_469808_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_479804_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_489800_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_499796_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_509792_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_519788_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_529784_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_539780_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_549776_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_559772_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_569768_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_579764_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_589760_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_599756_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_609752_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_619748_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_629744_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_639740_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_649736_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_659732_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_669728_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_679724_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_689720_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_699716_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_709712_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_719708_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_729704_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_739700_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_749696_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_759692_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_769688_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_779684_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_789680_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_799676_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_809672_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_819668_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_829664_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_839660_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_849656_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_859652_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_869648_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_879644_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_889640_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_899636_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_909632_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_919628_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_929624_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_939620_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_949616_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_959612_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_969608_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_979604_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_989600_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_999596_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1009592_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1019588_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1029584_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1039580_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1049576_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1059572_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1069568_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1079564_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1089560_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1099556_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1109552_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1119548_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1129544_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1139540_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1149536_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1159532_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1169528_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1179524_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1189520_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1199516_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1209512_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1219508_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1229504_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1239500_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1249496_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1259492_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1269488_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1279484_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1289480_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1299476_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1309472_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1319468_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1329464_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1339460_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1349456_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1359452_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1369448_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1379444_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1389440_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1399436_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1409432_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1419428_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1429424_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1439420_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1449416_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1459412_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1469408_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1479404_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1489400_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1499396_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1509392_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1519388_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1529384_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1539380_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1549376_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1559372_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1569368_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1579364_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1589360_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1599356_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1609352_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1619348_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1629344_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1639340_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1649336_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1659332_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1669328_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1679324_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1689320_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1699316_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1709312_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1719308_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1729304_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1739300_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1749296_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1759292_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1769288_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1779284_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1789280_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1799276_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1809272_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1819268_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1829264_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1839260_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1849256_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1859252_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1869248_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1879244_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1889240_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1899236_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1909232_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1919228_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1929224_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1939220_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1949216_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1959212_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1969208_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1979204_steps.zip
+Saving model checkpoint to results/DROPO/runs/trunkcube-v0/2025_05_19_15_05_57_trunkcube-v0_ppo_t1810000_seed0_efce1bc0eb04_FAX0Z/logs/model_ckpt_1989200_steps.zip
+--- Policy training done ----
+Mean reward and stdev: 34.3481746 17.524210539011964
+--- TARGET DOMAIN EVALUATION ---
+/home/docker/.conda/envs/sofa_source/lib/python3.8/site-packages/stable_baselines3/ppo/ppo.py:151: UserWarning: You have specified a mini-batch size of 144, but because the `RolloutBuffer` is of size `n_steps * n_envs = 24576`, after every 170 untruncated mini-batches, there will be a truncated mini-batch of size 96
+We recommend using a `batch_size` that is a factor of `n_steps * n_envs`.
+Info: (n_steps=2048 and n_envs=12)
+  warnings.warn(
+Target reward and stdev: 19.135884720000004 1.5465399600000003
