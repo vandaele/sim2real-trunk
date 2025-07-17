@@ -13,7 +13,7 @@ const uint16_t LMAX = 280;
 // const uint16_t INIT[NB_CABLES] = {828, 706, 1000, 758, 456, 404, 400, 360};
 const uint16_t INIT[NB_CABLES] = {828, 706, 1000, 758, 472, 404, 400, 360};
 
-const bool SIM_CONSTRAINED = true; // constrain pulling and releasing capbilities to simulation's
+const bool SIM_CONSTRAINED = false; // constrain pulling and releasing capbilities to simulation's
 const uint16_t SIM_MAX_PULLING[NB_CABLES] = {8, 11, 10, 10, 4, 5, 6, 6};
 const uint16_t SIM_MAX_RELEASING[NB_CABLES] = {2, 0, 0, 0, 4, 1, 1, 0};
 
