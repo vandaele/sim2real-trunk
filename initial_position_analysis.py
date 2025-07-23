@@ -40,7 +40,7 @@ def print_initial_position_diff():
 def main():
     global num_frames, last_frame
     
-    streaming_client = NatNetClient(server_ip_address="193.51.236.195", local_ip_address="193.51.236.48")
+    streaming_client = NatNetClient(server_ip_address="193.51.236.195", local_ip_address="193.51.236.105")
     streaming_client.on_data_frame_received_event.handlers.append(receive_new_frame)
 
     with streaming_client:
