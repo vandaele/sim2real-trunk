@@ -1,0 +1,53 @@
+2025-07-22 12:22:45,922 INFO    MainThread:756975 [wandb_setup.py:_flush():68] Configure stats pid to 756975
+2025-07-22 12:22:45,922 INFO    MainThread:756975 [wandb_setup.py:_flush():68] Loading settings from /home/docker/.config/wandb/settings
+2025-07-22 12:22:45,922 INFO    MainThread:756975 [wandb_setup.py:_flush():68] Loading settings from /home/aprotopapa/code/MySofa/sb3-gym-soro/wandb/settings
+2025-07-22 12:22:45,922 INFO    MainThread:756975 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2025-07-22 12:22:45,922 INFO    MainThread:756975 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train_dropo.py', 'program': 'train_dropo.py'}
+2025-07-22 12:22:45,922 INFO    MainThread:756975 [wandb_init.py:_log_setup():476] Logging user logs to results/DROPO/runs/trunkcube-v0/2025_07_22_12_22_44_trunkcube-v0_ppo_t2000000_seed0_efce1bc0eb04_3GUGO/wandb/run-20250722_122245-3sp60me6/logs/debug.log
+2025-07-22 12:22:45,922 INFO    MainThread:756975 [wandb_init.py:_log_setup():477] Logging internal logs to results/DROPO/runs/trunkcube-v0/2025_07_22_12_22_44_trunkcube-v0_ppo_t2000000_seed0_efce1bc0eb04_3GUGO/wandb/run-20250722_122245-3sp60me6/logs/debug-internal.log
+2025-07-22 12:22:45,923 INFO    MainThread:756975 [wandb_init.py:init():516] calling init triggers
+2025-07-22 12:22:45,923 INFO    MainThread:756975 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'env': 'trunkcube-v0', 'test_env': 'trunkcube-v0', 'group': None, 'algo': 'ppo', 'lr': 0.0001, 'batch_size': 144, 'n_layers': 3, 'n_neurons': 512, 'now': 12, 'timesteps': 2000000, 'reward_threshold': False, 'eval_freq': 10000, 'eval_episodes': 50, 'test_episodes': 100, 'test_render': False, 'seed': 0, 'device': 'cpu', 'verbose': 0, 'notes': None, 'wandb_mode': 'online', 'resume': False, 'resume_path': None, 'resume_wandb': None, 'run_path': 'results/DROPO', 'n_trajectories': None, 'data': 'custom', 'data_path': None, 'off_policy': None, 'budget': 5000, 'inference_only': False, 'clipping': None, 'initial_info_only': True, 'training_only': True, 'bounds_path': 'runs/DROPO_real/runs/trunkcube-v0/2025_07_05_13_12_20_trunkcube-v0_ppo_t2000000_seed0_efce1bc0eb04_MCH9C/best_phi.npy', 'unmodeled': None, 'reduced_sensing': True, 'noisy_setting': True, 'no_output': False, 'additive_variance': True, 'normalize': True, 'normalized_phi': False, 'logstdevs': True, 'epsilon': 1e-05, 'scaling': False, 'sample_size': 100, 'clip_episode_length': None, 'temperatureRegularization': True, 'temperatureRegularization_off': False, 'clip_state': None, 'no_resetfree': False}
+2025-07-22 12:22:45,923 INFO    MainThread:756975 [wandb_init.py:init():569] starting backend
+2025-07-22 12:22:45,923 INFO    MainThread:756975 [wandb_init.py:init():573] setting up manager
+2025-07-22 12:22:45,926 INFO    MainThread:756975 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-07-22 12:22:45,928 INFO    MainThread:756975 [wandb_init.py:init():580] backend started and connected
+2025-07-22 12:22:45,945 INFO    MainThread:756975 [wandb_init.py:init():658] updated telemetry
+2025-07-22 12:22:45,979 INFO    MainThread:756975 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2025-07-22 12:22:46,887 INFO    MainThread:756975 [wandb_run.py:_on_init():2000] communicating current version
+2025-07-22 12:22:47,009 INFO    MainThread:756975 [wandb_run.py:_on_init():2004] got version response upgrade_message: "wandb version 0.21.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2025-07-22 12:22:47,010 INFO    MainThread:756975 [wandb_init.py:init():728] starting run threads in backend
+2025-07-22 12:22:52,021 INFO    MainThread:756975 [wandb_run.py:_console_start():1980] atexit reg
+2025-07-22 12:22:52,022 INFO    MainThread:756975 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2025-07-22 12:22:52,022 INFO    MainThread:756975 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2025-07-22 12:22:52,022 INFO    MainThread:756975 [wandb_run.py:_redirect():1925] Redirects installed.
+2025-07-22 12:22:52,022 INFO    MainThread:756975 [wandb_init.py:init():765] run started, returning control to user process
+2025-07-22 12:22:55,445 INFO    MainThread:756975 [wandb_config.py:__setitem__():148] config set path = results/DROPO/runs/trunkcube-v0/2025_07_22_12_22_44_trunkcube-v0_ppo_t2000000_seed0_efce1bc0eb04_3GUGO/ - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f1a07d57e20>>
+2025-07-22 12:22:55,445 INFO    MainThread:756975 [wandb_run.py:_config_callback():1160] config_cb path results/DROPO/runs/trunkcube-v0/2025_07_22_12_22_44_trunkcube-v0_ppo_t2000000_seed0_efce1bc0eb04_3GUGO/ None
+2025-07-22 12:22:55,445 INFO    MainThread:756975 [wandb_config.py:__setitem__():148] config set hostname = efce1bc0eb04 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f1a07d57e20>>
+2025-07-22 12:22:55,445 INFO    MainThread:756975 [wandb_run.py:_config_callback():1160] config_cb hostname efce1bc0eb04 None
+2025-07-22 12:22:55,446 INFO    MainThread:756975 [wandb_config.py:__setitem__():148] config set target_task = [[1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]] - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f1a07d57e20>>
+2025-07-22 12:22:55,446 INFO    MainThread:756975 [wandb_run.py:_config_callback():1160] config_cb target_task [[1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+ [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]] None
