@@ -1,0 +1,39 @@
+44751
+Reduced sensing setting
+Target task: [1.5e-02 3.0e-01 4.0e-02 4.5e-01 4.5e+03]
+Loading best bounds from  BestBounds/TrunkCube/BayesSim_real/ETRSM.txt
+/home/docker/.conda/envs/sofa_source/lib/python3.8/site-packages/gym/spaces/box.py:73: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  logger.warn(
+Exception in thread Thread-7:
+Traceback (most recent call last):
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/aprotopapa/code/MySofa/sofa_rl/sofagym/env/common/rpc_server.py", line 416, in dispatch
+    with SimpleThreadedXMLRPCServer(('localhost', port_rpc), requestHandler=RequestHandler) as server:
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/xmlrpc/server.py", line 605, in __init__
+    socketserver.TCPServer.__init__(self, addr, requestHandler, bind_and_activate)
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/home/docker/.conda/envs/sofa_source/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+--- Policy training start ---
+/home/docker/.conda/envs/sofa_source/lib/python3.8/site-packages/stable_baselines3/ppo/ppo.py:151: UserWarning: You have specified a mini-batch size of 144, but because the `RolloutBuffer` is of size `n_steps * n_envs = 24576`, after every 170 untruncated mini-batches, there will be a truncated mini-batch of size 96
+We recommend using a `batch_size` that is a factor of `n_steps * n_envs`.
+Info: (n_steps=2048 and n_envs=12)
+  warnings.warn(
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_9996_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_19992_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_29988_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_39984_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_49980_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_59976_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_69972_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_79968_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_89964_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_99960_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_109956_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_119952_steps.zip
+Saving model checkpoint to results/BayesSim//runs/trunkcube-v0/2025_07_23_06_40_06_trunkcube-v0_ppo_t2000000_seed0_93677337f87b_LD0NC/logs/model_ckpt_129948_steps.zip
