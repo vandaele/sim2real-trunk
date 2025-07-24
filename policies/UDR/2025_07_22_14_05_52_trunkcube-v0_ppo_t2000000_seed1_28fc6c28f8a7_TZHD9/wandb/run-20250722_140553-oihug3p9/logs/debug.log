@@ -1,0 +1,32 @@
+2025-07-22 14:05:53,951 INFO    MainThread:2698568 [wandb_setup.py:_flush():68] Configure stats pid to 2698568
+2025-07-22 14:05:53,951 INFO    MainThread:2698568 [wandb_setup.py:_flush():68] Loading settings from /home/docker/.config/wandb/settings
+2025-07-22 14:05:53,951 INFO    MainThread:2698568 [wandb_setup.py:_flush():68] Loading settings from /home/aprotopapa/code/MySofa/sb3-gym-soro/wandb/settings
+2025-07-22 14:05:53,951 INFO    MainThread:2698568 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2025-07-22 14:05:53,951 INFO    MainThread:2698568 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train_udr.py', 'program': 'train_udr.py'}
+2025-07-22 14:05:53,951 INFO    MainThread:2698568 [wandb_init.py:_log_setup():476] Logging user logs to runs/trunkcube-v0/2025_07_22_14_05_52_trunkcube-v0_ppo_t2000000_seed1_28fc6c28f8a7_TZHD9/wandb/run-20250722_140553-oihug3p9/logs/debug.log
+2025-07-22 14:05:53,951 INFO    MainThread:2698568 [wandb_init.py:_log_setup():477] Logging internal logs to runs/trunkcube-v0/2025_07_22_14_05_52_trunkcube-v0_ppo_t2000000_seed1_28fc6c28f8a7_TZHD9/wandb/run-20250722_140553-oihug3p9/logs/debug-internal.log
+2025-07-22 14:05:53,952 INFO    MainThread:2698568 [wandb_init.py:init():516] calling init triggers
+2025-07-22 14:05:53,952 INFO    MainThread:2698568 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'env': 'trunkcube-v0', 'test_env': 'trunkcube-v0', 'group': None, 'algo': 'ppo', 'lr': 0.0001, 'batch_size': 144, 'n_layers': 3, 'n_neurons': 512, 'now': 12, 'timesteps': 2000000, 'reward_threshold': False, 'eval_freq': 10000, 'eval_episodes': 50, 'test_episodes': 100, 'test_render': False, 'seed': 1, 'device': 'cpu', 'verbose': 0, 'notes': None, 'wandb_mode': 'online', 'resume': False, 'resume_path': None, 'resume_wandb': None, 'run_path': None, 'unmodeled': None, 'reduced_sensing': True, 'noisy_setting': True}
+2025-07-22 14:05:53,952 INFO    MainThread:2698568 [wandb_init.py:init():569] starting backend
+2025-07-22 14:05:53,952 INFO    MainThread:2698568 [wandb_init.py:init():573] setting up manager
+2025-07-22 14:05:53,955 INFO    MainThread:2698568 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-07-22 14:05:53,957 INFO    MainThread:2698568 [wandb_init.py:init():580] backend started and connected
+2025-07-22 14:05:53,968 INFO    MainThread:2698568 [wandb_init.py:init():658] updated telemetry
+2025-07-22 14:05:54,002 INFO    MainThread:2698568 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2025-07-22 14:05:54,759 INFO    MainThread:2698568 [wandb_run.py:_on_init():2000] communicating current version
+2025-07-22 14:05:54,895 INFO    MainThread:2698568 [wandb_run.py:_on_init():2004] got version response upgrade_message: "wandb version 0.21.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2025-07-22 14:05:54,895 INFO    MainThread:2698568 [wandb_init.py:init():728] starting run threads in backend
+2025-07-22 14:05:59,909 INFO    MainThread:2698568 [wandb_run.py:_console_start():1980] atexit reg
+2025-07-22 14:05:59,910 INFO    MainThread:2698568 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2025-07-22 14:05:59,910 INFO    MainThread:2698568 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2025-07-22 14:05:59,910 INFO    MainThread:2698568 [wandb_run.py:_redirect():1925] Redirects installed.
+2025-07-22 14:05:59,911 INFO    MainThread:2698568 [wandb_init.py:init():765] run started, returning control to user process
+2025-07-22 14:05:59,911 INFO    MainThread:2698568 [wandb_config.py:__setitem__():148] config set path = runs/trunkcube-v0/2025_07_22_14_05_52_trunkcube-v0_ppo_t2000000_seed1_28fc6c28f8a7_TZHD9/ - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f980f3eba30>>
+2025-07-22 14:05:59,911 INFO    MainThread:2698568 [wandb_run.py:_config_callback():1160] config_cb path runs/trunkcube-v0/2025_07_22_14_05_52_trunkcube-v0_ppo_t2000000_seed1_28fc6c28f8a7_TZHD9/ None
+2025-07-22 14:05:59,912 INFO    MainThread:2698568 [wandb_config.py:__setitem__():148] config set hostname = 28fc6c28f8a7 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f980f3eba30>>
+2025-07-22 14:05:59,912 INFO    MainThread:2698568 [wandb_run.py:_config_callback():1160] config_cb hostname 28fc6c28f8a7 None
+2025-07-22 14:06:03,220 INFO    MainThread:2698568 [wandb_run.py:_config_callback():1160] config_cb None None {'train_dynamics_names': {0: 'cubeMass', 1: 'frictionCoeff', 2: 'trunkMass', 3: 'trunkPoissonRatio', 4: 'trunkYoungModulus'}}
+2025-07-22 14:06:03,221 INFO    MainThread:2698568 [wandb_run.py:_config_callback():1160] config_cb None None {'train_space_bounds': [[0.005, 1.0], [0.01, 1.0], [0.005, 1.0], [0.4, 0.5], [2000.0, 7000.0]]}
+2025-07-22 14:06:03,221 INFO    MainThread:2698568 [wandb_run.py:_config_callback():1160] config_cb None None {'train_uniform_distr': [[0.09687690179495381, 0.41993689467906115], [0.1943976092638942, 0.7231212485077365], [0.005113802943258162, 0.3488329234078325], [0.430233257263184, 0.439676747423067], [2733.7794540855652, 4694.083670016785]]}
