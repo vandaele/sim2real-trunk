@@ -1,0 +1,29 @@
+2025-07-22 15:25:05,983 INFO    MainThread:86 [wandb_setup.py:_flush():68] Configure stats pid to 86
+2025-07-22 15:25:05,983 INFO    MainThread:86 [wandb_setup.py:_flush():68] Loading settings from /home/docker/.config/wandb/settings
+2025-07-22 15:25:05,983 INFO    MainThread:86 [wandb_setup.py:_flush():68] Loading settings from /home/aprotopapa/code/MySofa/sb3-gym-soro/wandb/settings
+2025-07-22 15:25:05,983 INFO    MainThread:86 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2025-07-22 15:25:05,983 INFO    MainThread:86 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': 'train.py'}
+2025-07-22 15:25:05,983 INFO    MainThread:86 [wandb_init.py:_log_setup():476] Logging user logs to runs/trunkcube-v0/2025_07_22_15_25_04_trunkcube-v0_ppo_t2000000_seed2_466a645ed566_P1M1O/wandb/run-20250722_152505-9k8b4cyf/logs/debug.log
+2025-07-22 15:25:05,983 INFO    MainThread:86 [wandb_init.py:_log_setup():477] Logging internal logs to runs/trunkcube-v0/2025_07_22_15_25_04_trunkcube-v0_ppo_t2000000_seed2_466a645ed566_P1M1O/wandb/run-20250722_152505-9k8b4cyf/logs/debug-internal.log
+2025-07-22 15:25:05,983 INFO    MainThread:86 [wandb_init.py:init():516] calling init triggers
+2025-07-22 15:25:05,983 INFO    MainThread:86 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'env': 'trunkcube-v0', 'test_env': 'trunkcube-v0', 'group': None, 'algo': 'ppo', 'lr': 0.0001, 'batch_size': 144, 'n_layers': 3, 'n_neurons': 512, 'now': 12, 'timesteps': 2000000, 'reward_threshold': False, 'eval_freq': 10000, 'eval_episodes': 50, 'test_episodes': 100, 'test_render': False, 'seed': 2, 'device': 'cpu', 'verbose': 0, 'notes': None, 'wandb_mode': 'online', 'resume': False, 'resume_path': None, 'resume_wandb': None, 'run_path': None, 'save_freq': '10000', 'keep_prev_ckpt': False, 'reduced_sensing': True, 'noisy_setting': False}
+2025-07-22 15:25:05,984 INFO    MainThread:86 [wandb_init.py:init():569] starting backend
+2025-07-22 15:25:05,984 INFO    MainThread:86 [wandb_init.py:init():573] setting up manager
+2025-07-22 15:25:05,986 INFO    MainThread:86 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-07-22 15:25:05,988 INFO    MainThread:86 [wandb_init.py:init():580] backend started and connected
+2025-07-22 15:25:05,998 INFO    MainThread:86 [wandb_init.py:init():658] updated telemetry
+2025-07-22 15:25:06,033 INFO    MainThread:86 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2025-07-22 15:25:06,892 INFO    MainThread:86 [wandb_run.py:_on_init():2000] communicating current version
+2025-07-22 15:25:07,023 INFO    MainThread:86 [wandb_run.py:_on_init():2004] got version response upgrade_message: "wandb version 0.21.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2025-07-22 15:25:07,023 INFO    MainThread:86 [wandb_init.py:init():728] starting run threads in backend
+2025-07-22 15:25:12,034 INFO    MainThread:86 [wandb_run.py:_console_start():1980] atexit reg
+2025-07-22 15:25:12,034 INFO    MainThread:86 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2025-07-22 15:25:12,035 INFO    MainThread:86 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2025-07-22 15:25:12,035 INFO    MainThread:86 [wandb_run.py:_redirect():1925] Redirects installed.
+2025-07-22 15:25:12,035 INFO    MainThread:86 [wandb_init.py:init():765] run started, returning control to user process
+2025-07-22 15:25:12,035 INFO    MainThread:86 [wandb_config.py:__setitem__():148] config set path = runs/trunkcube-v0/2025_07_22_15_25_04_trunkcube-v0_ppo_t2000000_seed2_466a645ed566_P1M1O/ - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f632c82a8b0>>
+2025-07-22 15:25:12,035 INFO    MainThread:86 [wandb_run.py:_config_callback():1160] config_cb path runs/trunkcube-v0/2025_07_22_15_25_04_trunkcube-v0_ppo_t2000000_seed2_466a645ed566_P1M1O/ None
+2025-07-22 15:25:12,036 INFO    MainThread:86 [wandb_config.py:__setitem__():148] config set hostname = 466a645ed566 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f632c82a8b0>>
+2025-07-22 15:25:12,036 INFO    MainThread:86 [wandb_run.py:_config_callback():1160] config_cb hostname 466a645ed566 None
