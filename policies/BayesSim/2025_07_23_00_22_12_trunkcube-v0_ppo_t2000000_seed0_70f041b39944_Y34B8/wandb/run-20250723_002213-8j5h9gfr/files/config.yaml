@@ -1,0 +1,180 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.5
+    code_path: code/bayessim_param_inference.py
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.15
+    start_time: 1753222933.732995
+    t:
+      1:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 53
+      - 55
+      2:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 53
+      - 55
+      3:
+      - 13
+      - 14
+      - 16
+      - 19
+      - 23
+      4: 3.8.15
+      5: 0.13.5
+      8:
+      - 5
+algo:
+  desc: null
+  value: ppo
+batch_size:
+  desc: null
+  value: 144
+bounds_path:
+  desc: null
+  value: BestBounds/TrunkCube/BayesSim_real/BGI0N.txt
+clipping:
+  desc: null
+  value: null
+components:
+  desc: null
+  value: 5
+data:
+  desc: null
+  value: custom
+data_path:
+  desc: null
+  value: /home/andrea/MySofa/sb3-gym-soro/Dataset/TrunkCube/20230208-091408_1episodes.npy
+device:
+  desc: null
+  value: cpu
+dlimit:
+  desc: null
+  value: 50
+env:
+  desc: null
+  value: trunkcube-v0
+epochs:
+  desc: null
+  value: 10000
+eps:
+  desc: null
+  value: 0.0
+eval_episodes:
+  desc: null
+  value: 50
+eval_freq:
+  desc: null
+  value: 10000
+group:
+  desc: null
+  value: null
+hostname:
+  desc: null
+  value: 70f041b39944
+inference_only:
+  desc: null
+  value: false
+lr:
+  desc: null
+  value: 0.0001
+model:
+  desc: null
+  value: MDRFF
+n_layers:
+  desc: null
+  value: 3
+n_neurons:
+  desc: null
+  value: 512
+n_points:
+  desc: null
+  value: 1000
+n_trajectories:
+  desc: null
+  value: null
+noise_var:
+  desc: null
+  value: 0.0
+noisy_setting:
+  desc: null
+  value: true
+notes:
+  desc: null
+  value: null
+now:
+  desc: null
+  value: 12
+off_policy:
+  desc: null
+  value: null
+path:
+  desc: null
+  value: results/BayesSim//runs/trunkcube-v0/2025_07_23_00_22_12_trunkcube-v0_ppo_t2000000_seed0_70f041b39944_Y34B8/
+reduced_sensing:
+  desc: null
+  value: true
+resume:
+  desc: null
+  value: false
+resume_path:
+  desc: null
+  value: null
+resume_wandb:
+  desc: null
+  value: null
+reward_threshold:
+  desc: null
+  value: false
+run_path:
+  desc: null
+  value: results/BayesSim/
+seed:
+  desc: null
+  value: 0
+target_task:
+  desc: null
+  value:
+  - 0.015
+  - 0.3
+  - 0.04
+  - 0.45
+  - 4500.0
+test_env:
+  desc: null
+  value: trunkcube-v0
+test_episodes:
+  desc: null
+  value: 100
+test_render:
+  desc: null
+  value: false
+timesteps:
+  desc: null
+  value: 2000000
+training_only:
+  desc: null
+  value: true
+true_dist:
+  desc: null
+  value: null
+unmodeled:
+  desc: null
+  value: null
+verbose:
+  desc: null
+  value: 0
+wandb_mode:
+  desc: null
+  value: online
